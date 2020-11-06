@@ -19,9 +19,9 @@
         </nav>
     </div>
 </template>
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .c-main-navigation {
-    @apply bg-primary text-white;
+    @apply bg-purple-700 text-white;
     @apply py-3;
 
     nav {

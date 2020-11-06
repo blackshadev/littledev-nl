@@ -1,9 +1,11 @@
 <template>
-    <div class="container">
-        <h1>Blog: {{ content.title }}</h1>
-        <h3 class="time">{{ content.date }}</h3>
-        <p class="short">{{ content.description }}</p>
+    <div>
+        <div class="c-post-header">
+            <h1>{{ content.title }}</h1>
+        </div>
+
         <div class="content">
+            <p class="short">{{ content.description }}</p>
             <nuxt-content :document="content" />
         </div>
     </div>
