@@ -1,2 +1,5 @@
-This is a page about me.
-Nothing much, just like me.
+---
+title: About me
+description: A page about me
+---
+This is a page about me!
