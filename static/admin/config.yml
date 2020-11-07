@@ -23,7 +23,10 @@ collections:
     fields: 
       - {label: Title, name: title, widget: string, required: true}
       - {label: Description, name: description, widget: text, required: true}
-      - {label: URL, name: url, widget: string, required: true}
+      - {label: Source, name: source, widget: string}
+      - {label: URL, name: url, widget: string}
+      - {label: Languages, name: languages, widget: list}
+      - {label: Technologies, name: tech, widget: list}
   - label: "Pages"
     name: "pages"
     files:
