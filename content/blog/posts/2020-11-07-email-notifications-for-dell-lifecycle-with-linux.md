@@ -16,7 +16,7 @@ Let me first introduce you to BigDev, it’s a PowerEdge T610 with PERC H700 RAI
 
 ## The script
 
-Script Files
+[Script Files](/uploads/bigdev.zip)
 
 So a script I made! This simple script calls the GNU program [sendEmail](http://caspian.dotconf.net/menu/Software/SendEmail/). I have written it in nodeJS, not really for a specific reason, I also could have done it in Python or C or anything. At first I tried bash, but unfortunately I d
 
