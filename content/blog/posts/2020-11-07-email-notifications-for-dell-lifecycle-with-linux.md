@@ -14,18 +14,18 @@ date: '2014-08-24T10:51:00+02:00'
 
 Let me first introduce you to BigDev, it’s a PowerEdge T610 with PERC H700 RAID controller, 2x Xeon L5520 (we didn’t need that much process power anyway), 42GB Ram, 2x 2TB RAID 0 and 6x 4TB RAID 5, all and all really nice. But… I have one major complaint, the support for linux distro’s like Debian or Ubuntu with regard to the support for Windows is dreadful. In windows you got a really nice tool in which you can update your hardware, view its status and from my understanding automatically send a formatted email. In Linux you get some CLI tools, with which you can configure some things and view the status and the logs. So no automatic emailing, no updating. This really is a shame, but luckily you can config each event in the lifeCycle manager to execute a program.
 
-
-
 ## The script
 
 Script Files
 
-So a script I made! This simple script calls the GNU program sendEmail. I have written it in nodeJS, not really for a specific reason, I also could have done it in Python or C or anything. At first I tried bash, but unfortunately I d
+So a script I made! This simple script calls the GNU program [sendEmail](http://caspian.dotconf.net/menu/Software/SendEmail/). I have written it in nodeJS, not really for a specific reason, I also could have done it in Python or C or anything. At first I tried bash, but unfortunately I d
 
 iscovered that my Bash skills are greatly lacking. Anyway I stored the script along with a shell script to execute the JS file with nodeJS and the sendEmail program in /opt/scripts/. You can change all you want, or use it as it is. It is a simple script which only requires the Dell srvadmin, nodeJS and sendEmail. I run Ubuntu, so be carefull with the paths and commands, they can differ a little bit from other distros. The scripts are included in a zip (link also on top) and viewed at the bottom of this post.
 
 Pro Tip: You may want to change the from and destination email address before using it, in the script referred to as \`from\` and \`to\`
+
 #### mail_system_event.js
+
 ```javascript
 var sys = require('sys')
 var exec = require('child_process').exec;
@@ -54,11 +54,15 @@ child = exec("/opt/dell/srvadmin/bin/omreport system alertlog | tail -n 50", fun
     });
 });
 ```
+
 #### send_alert.sh
+
 ```sh
 nodejs /opt/scripts/mail_system_event.js
 ```
+
 #### SetDellEvents.sh
+
 ```sh
 sudo /opt/dell/srvadmin/bin/omconfig system alertaction event=powersupply execappath="/opt/scripts/send_alert.pl"
 sudo /opt/dell/srvadmin/bin/omconfig system alertaction event=powersupplywarn execappath="/opt/scripts/send_alert.pl"
