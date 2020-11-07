@@ -14,7 +14,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
     async asyncData({ $content, params }) {
-        const content = await $content(`blog/posts/${params.slug}`).fetch()
+        const content = await $content(`pages/${params.page}`).fetch()
 
         return {
             content,

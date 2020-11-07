@@ -7,8 +7,9 @@
     </div>
 </template>
 
-<style lang="less">
+<style lang="scss">
 .c-main-content {
     @apply mx-auto;
+    @apply mt-6;
 }
 </style>

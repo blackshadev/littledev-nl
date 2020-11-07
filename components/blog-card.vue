@@ -1,6 +1,9 @@
 <template>
     <div class="c-card">
         <div class="c-card__header">
+            <p class="c-card__date">
+                {{ formattedPostDate }}
+            </p>
             <nuxt-link
                 class="c-card__title"
                 :to="{
@@ -9,15 +12,11 @@
                 }"
                 >{{ post.title }}</nuxt-link
             >
-            <p class="c-card__date">
-                <font-awesome-icon :icon="['far', 'clock']" />
-                {{ formattedPostDate }}
-            </p>
         </div>
         <div class="c-card__content">
-            <img class="c-card__img" />
-            <p>{{ post.description }}</p>
+            {{ post.description }}
         </div>
+        <div class="c-card__overlay"></div>
     </div>
 </template>
 
@@ -42,25 +41,40 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .c-card {
+    @apply relative;
     @apply rounded border border-gray-600;
     @apply w-full;
+    @apply shadow-md;
+    @apply overflow-hidden;
+    @apply h-40;
+    @apply flex flex-col;
 
     &__header {
         @apply p-2 pl-6;
-        @apply border-b border-gray-600;
     }
 
     &__title {
         @apply text-lg;
         @apply font-bold;
+        @apply m-0;
     }
 
     &__date {
         @apply text-gray-600 text-sm;
+        @apply m-0;
     }
 
     &__content {
-        @apply p-1;
+        @apply pt-2 pl-6 pr-6;
+        @apply overflow-hidden;
+        @apply flex-shrink;
+    }
+
+    &__overlay {
+        @apply absolute bottom-0;
+        @apply h-8 w-full;
+        @apply z-10;
+        @apply bg-gradient-to-b from-transparent to-white;
     }
 
     &.-featured {

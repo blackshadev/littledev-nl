@@ -31,6 +31,15 @@ collections:
         file: "content/pages/about.md"
         fields:
           - {label: Title, name: title, widget: string, required: true}
-          - {label: Description, name: description, widget: text, required: true}
+          - {label: Image, name: image, widget: image, required: true}
+          - {label: Name, name: name, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Date of birth, name: bob, widget: date, required: true }
           - {label: Content, name: body, widget: markdown}
+          - label: Skills
+            name: skills
+            widget: list
+            fields:
+              - {label: Title,  name: Title, widget: string}
+            
   

@@ -1,10 +1,11 @@
 <template>
-    <div>
-        <div class="c-post-header">
+    <div class="c-post">
+        <div class="c-post__header">
+            <p class="c-post__date">{{ formattedContentDate }}</p>
             <h1>{{ content.title }}</h1>
         </div>
 
-        <div class="content">
+        <div class="c-post__content">
             <p class="short">{{ content.description }}</p>
             <nuxt-content :document="content" />
         </div>
@@ -13,6 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { formatAsDate } from '~/helpers/datetime'
 
 export default Vue.extend({
     async asyncData({ $content, params }) {
@@ -23,5 +25,38 @@ export default Vue.extend({
             params,
         }
     },
+    computed: {
+        formattedContentDate() {
+            return formatAsDate(this.$data.content.date)
+        },
+    },
 })
 </script>
+
+<style lang="scss">
+h1 {
+    @apply text-2xl font-bold;
+    @apply my-3;
+}
+h2 {
+    @apply text-xl font-medium;
+    @apply mt-4;
+}
+p {
+    @apply mb-6;
+}
+img[src*='right'] {
+    @apply float-right;
+}
+
+.c-post {
+    &__date {
+        @apply text-gray-600 text-sm;
+    }
+    &__header {
+        h1 {
+            @apply mt-0;
+        }
+    }
+}
+</style>
