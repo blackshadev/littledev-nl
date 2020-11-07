@@ -15,6 +15,16 @@
                         >Blog</nuxt-link
                     >
                 </li>
+                <li>
+                    <nuxt-link to="/projects" active-class="-active"
+                        >Projects</nuxt-link
+                    >
+                </li>
+                <li>
+                    <a href="https://github.com/blackshadev/" alt="Github">
+                        <font-awesome-icon :icon="['fab', 'github']" />
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -28,8 +38,9 @@
         @apply mx-auto;
         @apply flex justify-between flex-wrap;
     }
+
     .-main {
-        @apply mr-6;
+        @apply mx-3;
         @apply font-bold text-xl;
     }
 
