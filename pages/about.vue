@@ -5,7 +5,9 @@
                 <img :src="content.image" />
             </div>
             <p class="p-about__me__name">{{ content.name }}</p>
-            <p class="p-about__me__subtitle">{{ randomSubtitle }}</p>
+            <p class="p-about__me__subtitle">
+                {{ randomSubtitle.description }}
+            </p>
             <p class="p-about__me__dob">{{ dob }}</p>
         </div>
     </div>

@@ -4,10 +4,10 @@ image: /uploads/vincent-enrise-foto-ziebinnenzijde.jpg
 name: Vincent Hagen
 dob: '2020-12-16'
 subtitles:
-    - Tech enthusiast
-    - Problem solver
-    - Abstract thinker
-    - Thinkerer
+    - description: Tech enthusiast
+    - description: Problem solver
+    - description: Abstract thinker
+    - description: Thinkerer
 skills:
     - description: Python
       type: language
