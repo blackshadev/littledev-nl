@@ -33,13 +33,22 @@ collections:
           - {label: Title, name: title, widget: string, required: true}
           - {label: Image, name: image, widget: image, required: true}
           - {label: Name, name: name, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
           - {label: Date of birth, name: bob, widget: date, required: true }
           - {label: Content, name: body, widget: markdown}
+          - label: Subtitles
+            name: subtitles
+            widget: list
+            fields:
+              - {label: Description,  name: description, widget: string}
           - label: Skills
             name: skills
             widget: list
             fields:
-              - {label: Title,  name: Title, widget: string}
+              - {label: Description,  name: description, widget: string}
+              - label: Type
+                name: type
+                widget: select
+                options: ['language', 'framework', 'other']
+                
             
   
