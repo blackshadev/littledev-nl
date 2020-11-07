@@ -8,7 +8,10 @@
             <p class="p-about__me__subtitle">
                 {{ randomSubtitle.description }}
             </p>
-            <p class="p-about__me__dob">{{ dob }}</p>
+            <p class="p-about__me__dob">{{ content.dob }}</p>
+        </div>
+        <div class="p-about__content">
+            <nuxt-content :document="content" />
         </div>
     </div>
 </template>
