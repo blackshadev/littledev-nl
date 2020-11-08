@@ -33,10 +33,11 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .p-projects {
     @apply flex flex-wrap;
+    @apply p-3;
 
     &__item {
         @apply flex-none;
-        @apply p-2;
+        @apply mb-4;
         @apply w-full;
 
         @screen md {

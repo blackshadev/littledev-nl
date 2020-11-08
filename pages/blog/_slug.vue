@@ -35,6 +35,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .c-post {
+    @apply p-3;
+
     &__date {
         @apply text-gray-600 text-sm;
     }

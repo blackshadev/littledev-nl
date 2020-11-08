@@ -34,7 +34,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .p-blog-index {
-    @apply pt-3;
+    @apply p-3;
 }
 
 .c-grid {
@@ -43,7 +43,7 @@ export default Vue.extend({
     &__item {
         @apply flex-none;
         @apply w-full;
-        @apply ml-0 mt-4;
+        @apply ml-0 mb-4;
 
         &:first-child {
             @apply ml-0;
