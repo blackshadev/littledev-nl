@@ -57,7 +57,11 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .p-about {
-    @apply flex;
+    @apply flex flex-col;
+
+    @screen md {
+        @apply flex-row;
+    }
 
     &__skills {
         @apply flex justify-evenly flex-wrap;

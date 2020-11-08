@@ -4,14 +4,15 @@
             <p class="c-blog-card__date">
                 {{ formattedPostDate }}
             </p>
-            <nuxt-link
-                class="c-blog-card__title"
-                :to="{
-                    name: 'blog-slug',
-                    params: { slug: post.slug },
-                }"
-                >{{ post.title }}</nuxt-link
-            >
+            <h3 class="c-blog-card__title">
+                <nuxt-link
+                    :to="{
+                        name: 'blog-slug',
+                        params: { slug: post.slug },
+                    }"
+                    >{{ post.title }}</nuxt-link
+                >
+            </h3>
         </template>
 
         {{ post.description }}
@@ -42,7 +43,6 @@ export default Vue.extend({
     @apply h-40;
 
     &__title {
-        @apply text-lg;
         @apply font-bold;
         @apply m-0;
     }

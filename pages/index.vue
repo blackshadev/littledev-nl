@@ -10,7 +10,9 @@
             <nuxt-content :document="content" />
             <div class="p-home__recent">
                 <div class="p-home__recent__column">
-                    <h2>Latest projects</h2>
+                    <h2>
+                        <nuxt-link to="/projects">Latest projects</nuxt-link>
+                    </h2>
                     <div
                         v-for="project in recentProjects"
                         :key="project.slug"
@@ -23,7 +25,9 @@
                     </div>
                 </div>
                 <div class="p-home__recent__column">
-                    <h2>Latest posts</h2>
+                    <h2>
+                        <nuxt-link to="/blog">Latest posts</nuxt-link>
+                    </h2>
                     <div
                         v-for="blog in recentBlogPosts"
                         :key="blog.slug"
@@ -67,16 +71,14 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .p-home {
-    @apply flex flex-row;
+    @apply flex flex-col;
+
+    @screen md {
+        @apply flex-row;
+    }
 
     &__content {
         @apply p-6;
-
-        ::v-deep .nuxt-content-container {
-            p {
-                @apply pb-2;
-            }
-        }
     }
 
     &__recent {
@@ -84,7 +86,8 @@ export default Vue.extend({
         @apply flex flex-wrap flex-row;
 
         h2 {
-            @apply text-lg;
+            @apply text-xl;
+            @apply font-bold;
             @apply mb-1 pl-3;
         }
 
@@ -96,7 +99,11 @@ export default Vue.extend({
             }
 
             &:nth-child(2) {
-                @apply pl-3;
+                @apply pl-0;
+
+                @screen md {
+                    @apply pl-3;
+                }
             }
 
             @screen md {

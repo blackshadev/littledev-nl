@@ -48,24 +48,6 @@ export default Vue.extend({
         p {
             @apply mb-6;
         }
-
-        ::v-deep .nuxt-content-container {
-            h1 {
-                @apply text-2xl font-bold;
-                @apply my-3;
-            }
-            h2 {
-                @apply text-xl font-medium;
-                @apply mt-4;
-            }
-            img[src*='right'] {
-                @apply float-right;
-            }
-
-            p {
-                @apply mb-6;
-            }
-        }
     }
 }
 </style>

@@ -6,9 +6,9 @@
                     <p class="c-project-card__date">
                         {{ formattedDate }}
                     </p>
-                    <h2>
+                    <h3>
                         {{ project.title }}
-                    </h2>
+                    </h3>
                 </div>
 
                 <div class="c-project-card__links">
@@ -101,8 +101,7 @@ export default Vue.extend<{}, {}, {}, IProps>({
         @apply m-0;
         @apply text-gray-600 text-sm;
     }
-    &__title h2 {
-        @apply text-lg;
+    &__title h3 {
         @apply font-bold;
         @apply m-0;
     }
