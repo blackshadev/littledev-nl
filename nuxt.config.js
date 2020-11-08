@@ -54,6 +54,7 @@ export default {
     build: {},
     fontawesome: {
         icons: {
+            solid: ['faLink'],
             regular: [],
             brands: ['faGithub'],
         },

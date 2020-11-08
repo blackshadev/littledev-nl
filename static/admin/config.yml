@@ -25,6 +25,7 @@ collections:
       - {label: Description, name: description, widget: text, required: true}
       - {label: Source, name: source, widget: string}
       - {label: URL, name: url, widget: string}
+      - {label: Publish date, name: date, widget: "datetime"}
       - {label: Languages, name: languages, widget: list}
       - {label: Technologies, name: tech, widget: list}
   - label: "Pages"

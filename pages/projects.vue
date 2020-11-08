@@ -1,8 +1,14 @@
 <template>
     <div class="p-projects">
-        <div v-for="(project, index) in projects" :key="index">
-            <h2>{{ project.title }}</h2>
-            <p>{{ project.description }}</p>
+        <div
+            v-for="(project, index) in projects"
+            :key="index"
+            class="p-projects__item"
+        >
+            <project-card
+                class="p-projects__item__card"
+                :project="project"
+            ></project-card>
         </div>
     </div>
 </template>
@@ -12,7 +18,9 @@ import Vue from 'vue'
 
 export default Vue.extend({
     async asyncData({ $content, params }) {
-        const projects = await $content(`projects`).fetch()
+        const projects = await $content(`projects`)
+            .sortBy('date', 'desc')
+            .fetch()
 
         return {
             projects,
@@ -21,3 +29,23 @@ export default Vue.extend({
     },
 })
 </script>
+
+<style lang="scss" scoped>
+.p-projects {
+    @apply flex flex-wrap;
+
+    &__item {
+        @apply flex-none;
+        @apply p-2;
+        @apply w-full;
+
+        @screen md {
+            @apply w-1/2;
+        }
+
+        &__card {
+            @apply h-full;
+        }
+    }
+}
+</style>

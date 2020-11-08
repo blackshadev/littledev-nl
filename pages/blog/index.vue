@@ -1,9 +1,7 @@
 <template>
     <div class="p-blog-index">
-        <blog-card :post="featuredPost" class="-featured"></blog-card>
-
         <div class="c-grid">
-            <div v-for="post in allPosts" :key="post.slug" class="c-grid__item">
+            <div v-for="post in posts" :key="post.slug" class="c-grid__item">
                 <blog-card :post="post"></blog-card>
             </div>
         </div>
@@ -15,7 +13,9 @@ import Vue from 'vue'
 
 export default Vue.extend({
     async asyncData({ $content, params }) {
-        const posts = await $content(`blog/posts`).fetch()
+        const posts = await $content(`blog/posts`)
+            .sortBy('date', 'desc')
+            .fetch()
         return {
             posts,
             params,
