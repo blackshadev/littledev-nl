@@ -33,22 +33,7 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss">
-h1 {
-    @apply text-2xl font-bold;
-    @apply my-3;
-}
-h2 {
-    @apply text-xl font-medium;
-    @apply mt-4;
-}
-p {
-    @apply mb-6;
-}
-img[src*='right'] {
-    @apply float-right;
-}
-
+<style lang="scss" scoped>
 .c-post {
     &__date {
         @apply text-gray-600 text-sm;
@@ -56,6 +41,30 @@ img[src*='right'] {
     &__header {
         h1 {
             @apply mt-0;
+        }
+    }
+
+    &__content {
+        p {
+            @apply mb-6;
+        }
+
+        >>> .nuxt-content-container {
+            h1 {
+                @apply text-2xl font-bold;
+                @apply my-3;
+            }
+            h2 {
+                @apply text-xl font-medium;
+                @apply mt-4;
+            }
+            img[src*='right'] {
+                @apply float-right;
+            }
+
+            p {
+                @apply mb-6;
+            }
         }
     }
 }

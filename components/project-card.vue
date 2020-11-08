@@ -85,6 +85,7 @@ export default Vue.extend<{}, {}, {}, IProps>({
     }
     &__links {
         @apply mr-2;
+        @apply text-lg;
     }
     &__date {
         @apply m-0;
@@ -104,11 +105,15 @@ export default Vue.extend<{}, {}, {}, IProps>({
             @apply pb-6;
         }
         &__technologies {
+            @apply w-1/2;
+
             h3 {
-                @apply text-gray-600;
+                @apply text-gray-600 font-medium;
             }
 
-            @apply w-1/2;
+            ul {
+                @apply mt-1;
+            }
         }
     }
 }
