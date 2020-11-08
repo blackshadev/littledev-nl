@@ -49,7 +49,7 @@ export default Vue.extend({
             @apply mb-6;
         }
 
-        >>> .nuxt-content-container {
+        ::v-deep .nuxt-content-container {
             h1 {
                 @apply text-2xl font-bold;
                 @apply my-3;

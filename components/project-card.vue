@@ -1,5 +1,5 @@
 <template>
-    <common-card class="c-project-card" :overlay="false">
+    <common-card class="c-project-card" :overlay="overlay">
         <template v-slot:header>
             <div class="c-project-card__header">
                 <div class="c-project-card__title">
@@ -61,12 +61,17 @@ interface IProps {
         languages: string[]
         tech: string[]
     }
+    overlay: boolean
 }
 
 export default Vue.extend<{}, {}, {}, IProps>({
     props: {
         project: {
             type: Object,
+            required: true,
+        },
+        overlay: {
+            type: Boolean,
             required: true,
         },
     },
@@ -80,6 +85,11 @@ export default Vue.extend<{}, {}, {}, IProps>({
 
 <style lang="scss" scoped>
 .c-project-card {
+    &.-overlay {
+        @apply h-40;
+        @apply overflow-hidden;
+    }
+
     &__header {
         @apply flex justify-between;
     }

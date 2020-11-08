@@ -1,5 +1,5 @@
 <template>
-    <div class="c-card">
+    <div :class="{ 'c-card': true, '-overlay': overlay }">
         <div class="c-card__header">
             <slot name="header"></slot>
         </div>

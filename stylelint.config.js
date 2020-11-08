@@ -9,5 +9,11 @@ module.exports = {
                 ignoreAtRules: ['extends', 'tailwind', 'screen'],
             },
         ],
+        'selector-pseudo-element-no-unknown': [
+            true,
+            {
+                ignorePseudoElements: ['v-deep'],
+            },
+        ],
     },
 }
