@@ -1,17 +1,21 @@
-export default {
+const config = {
     // Target (https://go.nuxtjs.dev/config-target)
     target: 'static',
 
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
-        title: 'littledev',
+        title: 'Littledev',
         meta: [
             { charset: 'utf-8' },
             {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1',
             },
-            { hid: 'description', name: 'description', content: '' },
+            {
+                hid: 'description',
+                name: 'description',
+                content: 'The website of the Littledev',
+            },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
@@ -34,6 +38,7 @@ export default {
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
         '@nuxtjs/fontawesome',
+        '@nuxtjs/google-fonts',
     ],
 
     // Modules (https://go.nuxtjs.dev/config-modules)
@@ -59,4 +64,21 @@ export default {
             brands: ['faGithub'],
         },
     },
+    googleFonts: {
+        families: {
+            Oxygen: true,
+            Roboto: {
+                wght: [300],
+            },
+        },
+        display: 'swap',
+    },
 }
+
+if (process.env.BASE_PATH) {
+    config.router = {
+        base: process.env.BASE_PATH,
+    }
+}
+
+export default config

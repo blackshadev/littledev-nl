@@ -41,7 +41,7 @@
 
     .-main {
         @apply mx-3;
-        @apply font-bold text-xl;
+        @apply text-xl font-fancy;
     }
 
     &__items {
