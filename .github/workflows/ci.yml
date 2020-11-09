@@ -48,12 +48,12 @@ jobs:
         run: yarn lint
 
       - name: Run Generate
+        env:
+          BASE_PATH: '/test/'
         run: yarn generate
 
       - name: Upload
         uses: sebastianpopp/ftp-action@releases/v2
-        env:
-          BASE_PATH: '/test/'
         with:
           host: littledev.nl
           user: ${{ secrets.FTP_USERNAME }}
