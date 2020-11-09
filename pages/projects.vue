@@ -44,6 +44,12 @@ export default Vue.extend({
             @apply w-1/2;
         }
 
+        &:nth-child(2n) {
+            @screen md {
+                @apply pl-3;
+            }
+        }
+
         &__card {
             @apply h-full;
         }

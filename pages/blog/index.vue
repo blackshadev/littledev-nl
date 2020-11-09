@@ -51,6 +51,9 @@ export default Vue.extend({
 
         @screen md {
             @apply w-1/2;
+            &:nth-child(1n) {
+                @apply px-2;
+            }
             &:nth-child(2n) {
                 @apply px-2;
             }
