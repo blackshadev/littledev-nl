@@ -51,10 +51,12 @@ jobs:
         run: yarn generate
 
       - name: Upload
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-          ftp-server: ftp://littledev.nl/test
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist/
+          host: littledev.nl
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: "dist"
+          remoteDir: "test"
+
 
