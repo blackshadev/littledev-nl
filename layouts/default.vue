@@ -13,25 +13,30 @@
     @apply mt-6;
 }
 
-.nuxt-content-container {
-    a {
-        @apply underline;
-    }
+a svg {
+    @apply text-purple-800;
+}
 
-    h1 {
-        @apply text-2xl font-bold;
-        @apply my-3;
-    }
-    h2 {
-        @apply text-xl font-medium;
-        @apply mt-4;
-    }
-    img[src*='right'] {
-        @apply float-right;
-    }
+p a {
+    @apply underline;
+    @apply text-purple-800;
+}
 
-    p {
-        @apply mb-3;
-    }
+h1 {
+    @apply text-2xl font-bold;
+    @apply my-3;
+    @apply text-purple-900;
+}
+h2 {
+    @apply text-xl font-medium;
+    @apply mt-4;
+    @apply text-purple-900;
+}
+img[src*='right'] {
+    @apply float-right;
+}
+
+p {
+    @apply mb-3;
 }
 </style>

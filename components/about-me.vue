@@ -81,5 +81,9 @@ export default Vue.extend<
         @apply text-gray-600;
         @apply text-sm;
     }
+
+    p {
+        @apply m-0;
+    }
 }
 </style>

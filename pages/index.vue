@@ -89,6 +89,7 @@ export default Vue.extend({
             @apply text-xl;
             @apply font-bold;
             @apply mb-1 pl-3;
+            @apply text-purple-900;
         }
 
         &__column {

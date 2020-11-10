@@ -26,7 +26,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .c-card {
     @apply relative;
-    @apply rounded border border-gray-600;
+    @apply rounded border border-purple-900;
     @apply w-full;
     @apply shadow-md;
     @apply overflow-hidden;

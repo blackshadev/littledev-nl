@@ -31,8 +31,13 @@
 </template>
 <style lang="scss" scoped>
 .c-main-navigation {
-    @apply bg-purple-700 text-white;
+    @apply bg-purple-700;
     @apply py-3;
+
+    a,
+    a svg {
+        @apply text-white no-underline;
+    }
 
     nav {
         @apply mx-auto;

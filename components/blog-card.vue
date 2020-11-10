@@ -45,6 +45,7 @@ export default Vue.extend({
     &__title {
         @apply font-bold;
         @apply m-0;
+        @apply text-purple-900;
     }
 
     &__date {

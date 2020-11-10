@@ -104,6 +104,7 @@ export default Vue.extend<{}, {}, {}, IProps>({
     &__title h3 {
         @apply font-bold;
         @apply m-0;
+        @apply text-purple-900;
     }
     &__content {
         @apply pb-4;

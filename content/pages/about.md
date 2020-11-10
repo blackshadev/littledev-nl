@@ -1,6 +1,6 @@
 ---
 title: About me
-image: /uploads/vincent-enrise-foto-ziebinnenzijde.jpg
+image: uploads/vincent-enrise-foto-ziebinnenzijde.jpg
 name: Vincent Hagen
 dob: '2020-12-16'
 subtitles:
