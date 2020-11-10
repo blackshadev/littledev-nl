@@ -1,7 +1,7 @@
 name: ci
 
 on:
-  pull_request:
+  push:
     branches:
       - main
       - master
@@ -40,5 +40,15 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: yarn
 
-      - name: Run linter 👀
-        run: yarn lint
+      - name: Run Generate
+        run: yarn generate
+
+      - name: Upload
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: littledev.nl
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: "dist"
+
+
