@@ -1,15 +1,17 @@
 ---
 title: Scripts and their usages
 description: >-
-  Most people when you toss up the term scripts will automatically think of
-  JavaScript running within a browser. Although this is indeed the mayor use of
-  JavaScript, it also has other usages. Another example with which people are
-  fairly familiar is bash. Bash is used within Linux and Windows as shell /
-  terminal scripts. In this post I will explain a bit about script languages and
-  explain why I think that scripts are underused as method of flow control.
+    Most people when you toss up the term scripts will automatically think of
+    JavaScript running within a browser. Although this is indeed the mayor use of
+    JavaScript, it also has other usages. Another example with which people are
+    fairly familiar is bash. Bash is used within Linux and Windows as shell /
+    terminal scripts. In this post I will explain a bit about script languages and
+    explain why I think that scripts are underused as method of flow control.
 date: '2014-07-31T10:49:00+02:00'
-tags: Scripting
+tags:
+    - Scripting
 ---
+
 ## In the beginning
 
 In the early times of computing, you had a huge computer which would run so called “jobs” . People who wanted to run their program needed to create a program, put it on the computer and it would run overnight. Each program was queued as a job and they would execute one after another. When your job was done you got the result. In the really early days the result was printed, but the time I am targeting at the result was written on a tape and could be requested at a later time, but it would be overridden or swapped out at some point.
@@ -24,7 +26,7 @@ Knowing this you probably guessed that allot of modern “programming languages�
 
 But yeah… With python you can do a whole lot more than just control the flow of a process. Moreover with these languages you actually think that you have direct access to the OS with some function calls. But the hard truth is: You don’t.
 
-The clearest case of scripting is within browsers. The browser executes the JavaScript, it gives you some “native” functions and objects to interact with and you are good to go. This principle started so simple and allowed for so much. Some people will still remember the days when flash websites were the best and most amazing websites. Nowadays when I come across one I look amazed and ask myself. ~Why haven’t they just made it in JavaScript?.. Lower or no visible loading time.. Same possibilities.. and a lot cleaner. Currently JavaScript has exploded a bit, not that I complaining. With HTML5  you get so many cool things, but to be fair… Let’s not follow in the footsteps of PHP and make your ok script language a horror of possibilities and hugely inconsistent.
+The clearest case of scripting is within browsers. The browser executes the JavaScript, it gives you some “native” functions and objects to interact with and you are good to go. This principle started so simple and allowed for so much. Some people will still remember the days when flash websites were the best and most amazing websites. Nowadays when I come across one I look amazed and ask myself. ~Why haven’t they just made it in JavaScript?.. Lower or no visible loading time.. Same possibilities.. and a lot cleaner. Currently JavaScript has exploded a bit, not that I complaining. With HTML5 you get so many cool things, but to be fair… Let’s not follow in the footsteps of PHP and make your ok script language a horror of possibilities and hugely inconsistent.
 
 ## Underrated, how?
 

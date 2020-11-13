@@ -21,7 +21,15 @@ collections:
       - {label: Title, name: title, widget: string, required: true}
       - {label: Description, name: description, widget: text, required: true}
       - {label: Publish date, name: date, widget: datetime}
-      - {label: Tags, name: tags, widget: relation, collection: 'blog-tags', valueField: 'title', searchFields: [title], multiple: true }
+      - label: Tags
+        name: tags
+        widget: list 
+        fields:
+          - name: tag
+            widget: relation
+            collection: 'blog-tags'
+            valueField: 'title'
+            searchFields: [title]
       - {label: Content, name: body, widget: markdown}
   - name: "projects"
     label: "Projects"
