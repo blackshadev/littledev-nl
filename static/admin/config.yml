@@ -29,8 +29,9 @@ collections:
             label: Tag
             widget: relation
             collection: 'blog-tags'
-            valueField: 'title'
+            valueField: 'key'
             searchFields: [title]
+            displayFields: [title]
       - {label: Content, name: body, widget: markdown}
   - name: "projects"
     label: "Projects"

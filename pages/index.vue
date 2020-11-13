@@ -44,6 +44,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import { FIELDS } from '~/components/about-me.vue'
+import { extendTagsForPosts, getTagKeysFromPosts } from '~/helpers/tags'
+import { IPost, ITag } from '~/types/blog'
 
 export default Vue.extend({
     async asyncData({ $content, params }) {
@@ -53,10 +55,19 @@ export default Vue.extend({
             .sortBy('date', 'desc')
             .limit(2)
             .fetch()
-        const recentBlogPosts = await $content(`blog/posts`)
+        const _recentBlogPosts = ((await $content(`blog/posts`)
             .sortBy('date', 'desc')
             .limit(2)
-            .fetch()
+            .fetch()) as any) as IPost[]
+        const tagsFromRecentPosts = ((await $content(`blog/tags`)
+            .where({ key: { $in: getTagKeysFromPosts(_recentBlogPosts) } })
+            .sortBy('title', 'asc')
+            .fetch()) as any) as ITag[]
+
+        const recentBlogPosts = extendTagsForPosts(
+            _recentBlogPosts,
+            tagsFromRecentPosts
+        )
 
         return {
             aboutMe,

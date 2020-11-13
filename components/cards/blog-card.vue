@@ -13,10 +13,18 @@
                     >{{ post.title }}</nuxt-link
                 >
             </h3>
-            <div class="c-blog__tags">
-                <span v-for="tag in post.tags" :key="tag.tag">
-                    {{ tag }}
-                </span>
+            <div class="c-blog-card__tags">
+                <nuxt-link
+                    v-for="tag in post.tags"
+                    :key="tag.key"
+                    class="c-blog-card__tag"
+                    :to="{
+                        name: 'blog-by-tag-tag',
+                        params: { tag: tag.key },
+                    }"
+                >
+                    {{ tag.title }}
+                </nuxt-link>
             </div>
         </template>
 
@@ -26,7 +34,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { formatAsDate } from '../helpers/datetime'
+import { formatAsDate } from '~/helpers/datetime'
 
 export default Vue.extend({
     props: {
@@ -56,6 +64,12 @@ export default Vue.extend({
     &__date {
         @apply text-gray-600 text-sm;
         @apply m-0;
+    }
+
+    &__tag {
+        @apply mr-1 p-1;
+        @apply bg-purple-300;
+        @apply rounded;
     }
 }
 </style>

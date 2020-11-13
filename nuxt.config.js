@@ -53,7 +53,9 @@ const config = {
     axios: {},
 
     // Content module configuration (https://go.nuxtjs.dev/config-content)
-    content: {},
+    content: {
+        nestedProperties: ['tags.tag'],
+    },
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {},
