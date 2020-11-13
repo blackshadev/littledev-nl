@@ -26,6 +26,7 @@ collections:
         widget: list 
         fields:
           - name: tag
+            label: Tag
             widget: relation
             collection: 'blog-tags'
             valueField: 'title'

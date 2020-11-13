@@ -9,8 +9,8 @@ description: >-
     structures that are used to store and lookup key values within databases.
 date: '2015-05-31T00:00:00+02:00'
 tags:
-    - Technical
-    - Programming
+    - tag: Technical
+    - tag: Programming
 ---
 
 ## Trees?

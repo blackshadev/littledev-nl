@@ -10,7 +10,7 @@ description: >-
     My solution: I will make my own simple script and share it.
 date: '2014-08-24T10:51:00+02:00'
 tags:
-    - Scripting
+    - tag: Scripting
 ---
 
 ## The server

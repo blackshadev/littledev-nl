@@ -8,8 +8,8 @@ description: >-
     will discuss search problems in general, Astar and other search algorithms.
 date: '2015-01-03T16:31:00+01:00'
 tags:
-    - Technical
-    - Programming
+    - tag: Technical
+    - tag: Programming
 ---
 
 ## Problem description
