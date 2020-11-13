@@ -1,11 +1,12 @@
 ---
 title: URL routing
 description: >
-    Ever wondered how packages like flask and express route their URLs to the
-    correct functions, even with properties like wildcards and parameters? In this
-    post I will discuss a solution to this URL routing problem which uses a search
-    algorithm to find the correct route.
+  Ever wondered how packages like flask and express route their URLs to the
+  correct functions, even with properties like wildcards and parameters? In this
+  post I will discuss a solution to this URL routing problem which uses a search
+  algorithm to find the correct route.
 date: '2015-01-13T16:32:00+01:00'
+tags: 'Technical, Programming'
 ---
 
 A few weeks ago I needed to create a way of deploying webservices in nodeJS for a client of mine. I looked at some of the existing packages out on the web, but I couldn’t find anything to my liking. I decided to custom build it, not only for learning purposes, but also to be able to use a framework the client was already accustomed to.
