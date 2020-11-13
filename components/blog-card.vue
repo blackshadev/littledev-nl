@@ -13,6 +13,11 @@
                     >{{ post.title }}</nuxt-link
                 >
             </h3>
+            <div class="c-blog__tags">
+                <span v-for="tag in post.tags" :key="tag.tag">
+                    {{ tag }}
+                </span>
+            </div>
         </template>
 
         {{ post.description }}

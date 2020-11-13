@@ -7,8 +7,8 @@ description: >
     algorithm to find the correct route.
 date: '2015-01-13T16:32:00+01:00'
 tags:
-    - tag: Technical
-    - tag: Programming
+    - tag: tech
+    - tag: programming
 ---
 
 A few weeks ago I needed to create a way of deploying webservices in nodeJS for a client of mine. I looked at some of the existing packages out on the web, but I couldn’t find anything to my liking. I decided to custom build it, not only for learning purposes, but also to be able to use a framework the client was already accustomed to.

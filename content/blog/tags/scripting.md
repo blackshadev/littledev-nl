@@ -1,4 +1,4 @@
 ---
+key: script
 title: Scripting
 ---
-
