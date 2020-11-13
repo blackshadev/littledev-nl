@@ -32,7 +32,7 @@ Ok, of course we could regex the whole thing, but let’s first use our brains. 
 
 ## Tree traversing
 
-![Routes structured in a tree where each purple has a resource bound to it](uploads/roadieroutegraph-300x271.png#right)
+![Routes structured in a tree where each purple has a resource bound to it](/uploads/roadieroutegraph-300x271.png#right)
 
 Routes structured in a tree where each purple has a resource bound to it
 
