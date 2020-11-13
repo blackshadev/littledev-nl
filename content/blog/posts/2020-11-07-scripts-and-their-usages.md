@@ -8,6 +8,7 @@ description: >-
   terminal scripts. In this post I will explain a bit about script languages and
   explain why I think that scripts are underused as method of flow control.
 date: '2014-07-31T10:49:00+02:00'
+tags: Scripting
 ---
 ## In the beginning
 
