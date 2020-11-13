@@ -8,6 +8,7 @@ description: >-
   graph databases all have a B+ tree or at least a B tree. These trees are data
   structures that are used to store and lookup key values within databases.
 date: '2015-05-31T00:00:00+02:00'
+tags: 'Technical, Programming'
 ---
 ## Trees?
 
