@@ -1,12 +1,13 @@
 ---
 title: Searching made easy
 description: >-
-    Search problems are one of those problems that every programmer will encounter
-    at least once in his or her life. An important note is that this post will
-    explain search problems, but these are not “how to lookup relative hits in
-    multiple texts” but more “given a map, what is the best route from A to B”. I
-    will discuss search problems in general, Astar and other search algorithms.
+  Search problems are one of those problems that every programmer will encounter
+  at least once in his or her life. An important note is that this post will
+  explain search problems, but these are not “how to lookup relative hits in
+  multiple texts” but more “given a map, what is the best route from A to B”. I
+  will discuss search problems in general, Astar and other search algorithms.
 date: '2015-01-03T16:31:00+01:00'
+tags: 'Technical, Programming'
 ---
 
 ## Problem description
