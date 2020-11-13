@@ -6,6 +6,12 @@ media_folder: "static/uploads"
 public_folder: "uploads"
   
 collections:
+  - name: "blog-tags"
+    label: "Blog Tags"
+    folder: "content/blog/tags"
+    create: true
+    fields: 
+      - {label: Title, name: title, widget: string, required: true}
   - name: "blog"
     label: "Blog"
     folder: "content/blog/posts"
@@ -14,8 +20,9 @@ collections:
     fields: 
       - {label: Title, name: title, widget: string, required: true}
       - {label: Description, name: description, widget: text, required: true}
-      - {label: Publish date, name: date, widget: "datetime"}
-      - {label: Content, name: body, widget: "markdown"}
+      - {label: Publish date, name: date, widget: datetime}
+      - {label: Tags, name: tags, widget: relation, collection: 'blog-tags', value_field: '{{slug}}', search_fields: [title] }
+      - {label: Content, name: body, widget: markdown}
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
@@ -25,7 +32,7 @@ collections:
       - {label: Description, name: description, widget: text, required: true}
       - {label: Source, name: source, widget: string}
       - {label: URL, name: url, widget: string}
-      - {label: Publish date, name: date, widget: "datetime"}
+      - {label: Publish date, name: date, widget: datetime}
       - {label: Languages, name: languages, widget: list}
       - {label: Technologies, name: tech, widget: list}
   - label: "Pages"
