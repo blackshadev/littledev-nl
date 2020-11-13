@@ -1406,13 +1406,13 @@
     "@fortawesome/fontawesome-svg-core" "^1.2.27"
     "@fortawesome/vue-fontawesome" "^0.1.9"
 
-"@nuxtjs/google-fonts@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/google-fonts/-/google-fonts-1.1.5.tgz#962d040e9ba579460c5acb6ac80a76ec421ba6b4"
-  integrity sha512-HmsBnxyxOZq1B6KCL0087SbHBnxMm7HkfTpnjAgPW88YGX/O4jz9uUpr/Oj44xLOXjdg7v4Wl+cHbgZm3It6QQ==
+"@nuxtjs/google-fonts@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-fonts/-/google-fonts-1.2.0.tgz#b226683f2ccfdb1caab02729ff1c513062b9e868"
+  integrity sha512-uxH3A9j0kyPDyhq4yFxT4GZjYinVzOFRFSTT1Tx5mqXvAaiqa9u6wie2KnN8i+LFypn/WKp1mREPO17cgdlZkQ==
   dependencies:
     consola "^2.15.0"
-    google-fonts-helper "^1.1.0"
+    google-fonts-helper "^1.1.1"
 
 "@nuxtjs/proxy@^2.0.1":
   version "2.0.1"
@@ -3828,10 +3828,10 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-dayjs@^1.9.5:
-  version "1.9.5"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.9.5.tgz#fd49994ebe71639d2ce9575e97186642dfce9808"
-  integrity sha512-WULIw7UpW/E0y6VywewpbXAMH3d5cZijEhoHLwM+OMVbk/NtchKS/W+57H/0P1rqU7gHrAArjiRLHCUhgMQl6w==
+dayjs@^1.9.6:
+  version "1.9.6"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.9.6.tgz#6f0c77d76ac1ff63720dd1197e5cb87b67943d70"
+  integrity sha512-HngNLtPEBWRo8EFVmHFmSXAjtCX8rGNqeXQI0Gh7wCTSqwaKgPIDqu9m07wABVopNwzvOeCb+2711vQhDlcIXw==
 
 de-indent@^1.0.2:
   version "1.0.2"
@@ -5254,10 +5254,10 @@ good-listener@^1.2.2:
   dependencies:
     delegate "^3.1.2"
 
-google-fonts-helper@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/google-fonts-helper/-/google-fonts-helper-1.1.0.tgz#d192fa10f590a9f1d6aa9b5c665e39328ee2be31"
-  integrity sha512-ipyBrL1Mgpqo2daRuDHo5OM4gWoy6ePbTum39p3SdJm0YyF7DY+aGuQrrRTJLAQsELE7hSA/myQLGAqgQoRLGw==
+google-fonts-helper@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/google-fonts-helper/-/google-fonts-helper-1.1.1.tgz#bead59e31654425363e0cfbaea88d94ef20653be"
+  integrity sha512-rJ484VtEQKOsbPcAhE+kB8/W1IkG1LpbLjeoEhx2z1WQz7OOdLL9I71DbgePbT4asxJs+btGc9+Otkt9G5bOcg==
   dependencies:
     deepmerge "^4.2.2"
     fs-extra "^9.0.1"
@@ -9340,10 +9340,10 @@ safe-regex@^2.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass-loader@^10.0.5:
-  version "10.0.5"
-  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-10.0.5.tgz#f53505b5ddbedf43797470ceb34066ded82bb769"
-  integrity sha512-2LqoNPtKkZq/XbXNQ4C64GFEleSEHKv6NPSI+bMC/l+jpEXGJhiRYkAQToO24MR7NU4JRY2RpLpJ/gjo2Uf13w==
+sass-loader@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-10.1.0.tgz#1727fcc0c32ab3eb197cda61d78adf4e9174a4b3"
+  integrity sha512-ZCKAlczLBbFd3aGAhowpYEy69Te3Z68cg8bnHHl6WnSCvnKpbM6pQrz957HWMa8LKVuhnD9uMplmMAHwGQtHeg==
   dependencies:
     klona "^2.0.4"
     loader-utils "^2.0.0"
