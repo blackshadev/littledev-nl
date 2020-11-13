@@ -9,6 +9,7 @@ description: >-
   only solutions for windows or I needed to lay down money for a simple script.
   My solution: I will make my own simple script and share it.
 date: '2014-08-24T10:51:00+02:00'
+tags: Scripting
 ---
 ## The server
 
