@@ -19,7 +19,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
       - {label: Title, name: title, widget: string, required: true}
-      - {label: State, name: state, widget: list, options: [Draft, Published]}
+      - {label: State, name: state, widget: select, options: [Draft, Published]}
       - {label: Description, name: description, widget: text, required: true}
       - {label: Publish date, name: date, widget: datetime}
       - label: Tags
