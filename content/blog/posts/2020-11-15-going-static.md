@@ -3,13 +3,13 @@ title: Going static
 state: Draft
 description: >-
   My journey migrating from WordPress to a fully statistically generated with
-  NuxtJS.
+  NuxtJS, TailwindCSS and Netlify CMS, aka a JAMstack.
 date: '2020-11-15T11:39:59+01:00'
 tags:
   - tag: programming
   - tag: tech
 ---
-So I got in on the new hype nowadays: Staticly generated websites. My reason for it is twofold, I wanted to learn about this new hype. But more importantly, I didn't want to maintain my WordPress, I don't want to update it and it's plugins to keep it secure, I don't keep updating a template in order to keep my website viewable throughout updates and most importantly I don't want to receive emails because some Russians tried to log into my WordPress account or fear it got hacked because I didn't update it quickly enough.
+So I got in on the new hype nowadays: Staticly generated websites with a JAMstack. My reason for it is twofold, I wanted to learn about this new hype. But more importantly, I didn't want to maintain my WordPress, I don't want to update it and it's plugins to keep it secure, I don't keep updating a template in order to keep my website viewable throughout updates and most importantly I don't want to receive emails because some Russians tried to log into my WordPress account or fear it got hacked because I didn't update it quickly enough.
 
 ## Static... what now?
 
@@ -48,3 +48,11 @@ But... I got no styling, I could have used some front-end frameworks like Bootst
 ## The struggles
 
 So this is a more technical solution to WordPress, you still need to have some coding skills to do this. In my opinion with basic HTML and JS you will be fine. What's more, if you need more complex things, like tags on your blogs, you need to build it yourself. No easy plugins or database joins, at least I didn't find any.  
+
+## Final verdict
+
+To be totally honest, when I started I thought I wouldn't like the hassle and end up buying something like a squarespace account and be done with it. I just want a website to have a presence and to blog a bit. 
+
+But! It was way easier than I thought, and even though I don't like netlify CMS that much, I like the freedom that the whole stack brings me. I will switch CMS one day, or just inline edit in NuxtJS (because yes it can do that in dev mode).
+
+All in all, a fun experience and this website is here to stay! 10/10 would statically generate it again
