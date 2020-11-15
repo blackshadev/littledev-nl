@@ -1,6 +1,6 @@
 ---
 title: Going static
-state: Draft
+state: Published
 description: >-
   My journey migrating from WordPress to a fully statistically generated with
   NuxtJS, TailwindCSS and Netlify CMS, aka a JAMstack.
