@@ -5,12 +5,15 @@
 <script lang="ts">
 import Vue from 'vue'
 import { extendTagsForPosts } from '~/helpers/tags'
-import { IPost, ITag } from '~/types/blog'
+import { IPost, ITag, State } from '~/types/blog'
 
 export default Vue.extend({
     async asyncData({ $content, params }) {
         const basePosts = ((await $content(`blog/posts`)
-            .where({ 'tags.tag': { $contains: params.tag } })
+            .where({
+                'tags.tag': { $contains: params.tag },
+                state: { $eq: State.Published },
+            })
             .sortBy('date', 'desc')
             .fetch()) as any) as IPost[]
         const allTags = ((await $content(`blog/tags`)

@@ -1,5 +1,6 @@
 ---
 title: Searching made easy
+state: Published
 description: >-
     Search problems are one of those problems that every programmer will encounter
     at least once in his or her life. An important note is that this post will

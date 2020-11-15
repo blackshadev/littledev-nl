@@ -18,3 +18,8 @@ export interface IExpandedPost  {
     date: string;
     description: string;
 }
+
+export enum State {
+    Published = 'Published',
+    Draft = 'Draft'
+};

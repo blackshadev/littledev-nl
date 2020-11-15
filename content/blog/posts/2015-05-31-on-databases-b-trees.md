@@ -1,5 +1,6 @@
 ---
 title: 'On databases: B+ trees'
+state: Published
 description: >-
     Since I have been busy with a new project for school and since it seems
     promising, let’s talk more about it! As can be guessed by the title it is a

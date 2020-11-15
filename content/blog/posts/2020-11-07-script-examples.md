@@ -1,5 +1,6 @@
 ---
 title: Script examples
+state: Published
 description: >+
     As promised in this post I will give some examples of script usage within a
     project. This allows for more customizable control which is easy to maintain

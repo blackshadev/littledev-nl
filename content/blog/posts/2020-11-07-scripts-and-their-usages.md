@@ -1,5 +1,6 @@
 ---
 title: Scripts and their usages
+state: Published
 description: >-
     Most people when you toss up the term scripts will automatically think of
     JavaScript running within a browser. Although this is indeed the mayor use of

@@ -1,5 +1,6 @@
 ---
 title: Email notifications for Dell LifeCycle with Linux
+state: Published
 description: >-
     So I got myself a fancy new server. It really is great, I really love it, it
     performs great and I noticed that there was an option to execute an executable
