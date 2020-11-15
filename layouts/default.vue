@@ -32,11 +32,21 @@ h2 {
     @apply mt-4;
     @apply text-purple-900;
 }
+h3 {
+    @apply text-lg font-medium;
+    @apply mt-4;
+    @apply text-purple-900;
+}
 img[src*='right'] {
     @apply float-right;
 }
 
 p {
+    @apply mb-3;
+}
+
+ol {
+    @apply list-decimal list-inside;
     @apply mb-3;
 }
 </style>
