@@ -15,4 +15,15 @@ So I got in on the new hype nowadays: Staticly generated websites. My reason for
 
 So first, a short introduction what this statically generated thing I am talking about?
 
+With WordPress your content: the blog posts, the pages, etc. Are stored in a database. For each page acces, WordPress will roughly do the following: 
+
+* Consult it's database and check what kind of page the user tries to access.
+* Fetches all the content from the database
+* Puts the content from the database in the template
+* Serves the fully rendered page to the user
+
+
+
+
+
 So my radical solution to this problem: statically generate my website. To be fair, blog type websites or just plain old websites do lent themselves very well for thi
