@@ -10,10 +10,10 @@ import { IPost, ITag, State } from '~/types/blog'
 export default Vue.extend({
     async asyncData({ $content, params }) {
         const basePosts = ((await $content(`blog/posts`)
+            .where({ state: { $eq: State.Published } })
             .sortBy('date', 'desc')
             .fetch()) as any) as IPost[]
         const allTags = ((await $content(`blog/tags`)
-            .where({ state: { $eq: State.Published } })
             .sortBy('title', 'asc')
             .fetch()) as any) as ITag[]
 
