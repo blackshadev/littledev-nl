@@ -9,7 +9,7 @@ tags:
   - tag: programming
   - tag: tech
 ---
-So I got in on the new hype nowadays: Staticly generated websites with a JAMstack. My reason for it is twofold, I wanted to learn about this new hype. But more importantly, I didn't want to maintain my WordPress, I don't want to update it and it's plugins to keep it secure, I don't keep updating a template in order to keep my website viewable throughout updates and most importantly I don't want to receive emails because some Russians tried to log into my WordPress account or fear it got hacked because I didn't update it quickly enough.
+So I got in on the new hype nowadays: Statically generated websites with a JAMstack. My reason for it is twofold, I wanted to learn about this new hype. But more importantly, I didn't want to maintain my WordPress, I don't want to update it and it's plugins to keep it secure, I don't keep updating a template in order to keep my website viewable throughout updates and most importantly I don't want to receive emails because some Russians tried to log into my WordPress account or fear it got hacked because I didn't update it quickly enough.
 
 ## Static... what now?
 
@@ -31,7 +31,7 @@ To be fair, blog type websites or just plain old websites do lent themselves ver
 
 So how did I did this, what did I use? And how did I like it.
 
-### Content management 
+### Content management
 
 So first things first, I wanted to have all my content available in my source control. I am an developer and I don't mind tinkering when I get full control. So I looked up a CMS which is git based and I ended up with Netlify CMS. Not the best choice I can make, now I require a netlify account and an Netlify identity. But their are upsides, I can edit my content without it, and switch it out when something better comes along.  
 
