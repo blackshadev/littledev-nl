@@ -13,29 +13,21 @@
     @apply mt-6;
 }
 
-a svg {
-    @apply text-purple-800;
-}
-
 p a {
     @apply underline;
-    @apply text-purple-800;
 }
 
 h1 {
     @apply text-2xl font-bold;
     @apply my-3;
-    @apply text-purple-900;
 }
 h2 {
     @apply text-xl font-medium;
     @apply mt-4;
-    @apply text-purple-900;
 }
 h3 {
     @apply text-lg font-medium;
     @apply mt-4;
-    @apply text-purple-900;
 }
 img[src*='right'] {
     @apply float-right;
@@ -48,5 +40,33 @@ p {
 ol {
     @apply list-decimal list-inside;
     @apply mb-3;
+}
+
+h1,
+h2,
+h3 {
+    @apply text-primary;
+
+    @media dark {
+        @apply text-dark-primary;
+    }
+}
+a svg,
+p a {
+    @apply text-link;
+
+    @media dark {
+        a svg,
+        p a {
+            @apply text-dark-link;
+        }
+    }
+}
+
+@screen dark {
+    body {
+        @apply bg-black;
+        @apply text-white;
+    }
 }
 </style>
