@@ -47,7 +47,7 @@ h2,
 h3 {
     @apply text-primary;
 
-    @media dark {
+    @screen dark {
         @apply text-dark-primary;
     }
 }
@@ -55,7 +55,7 @@ a svg,
 p a {
     @apply text-link;
 
-    @media dark {
+    @screen dark {
         a svg,
         p a {
             @apply text-dark-link;
