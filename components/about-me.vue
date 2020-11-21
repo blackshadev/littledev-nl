@@ -74,12 +74,20 @@ export default Vue.extend<
     }
 
     &__subtitle {
-        @apply text-gray-600;
+        @apply text-sub;
+
+        @screen dark {
+            @apply text-dark-sub;
+        }
     }
 
     &__dob {
-        @apply text-gray-600;
+        @apply text-sub;
         @apply text-sm;
+
+        @screen dark {
+            @apply text-dark-sub;
+        }
     }
 
     p {

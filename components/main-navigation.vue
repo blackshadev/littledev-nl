@@ -31,7 +31,7 @@
 </template>
 <style lang="scss" scoped>
 .c-main-navigation {
-    @apply bg-purple-700;
+    @apply bg-nav;
     @apply py-3;
 
     a,
@@ -59,6 +59,10 @@
                 @apply underline;
             }
         }
+    }
+
+    @screen dark {
+        @apply bg-dark-nav;
     }
 }
 </style>

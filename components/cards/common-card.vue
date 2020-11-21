@@ -26,7 +26,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .c-card {
     @apply relative;
-    @apply rounded border border-purple-900;
+    @apply rounded border border-primary;
     @apply w-full;
     @apply shadow-md;
     @apply overflow-hidden;
@@ -48,17 +48,14 @@ export default Vue.extend({
         @apply z-10;
         @apply bg-gradient-to-b from-transparent to-white;
     }
+}
 
-    &.-featured {
-        @apply border-purple-800;
+@screen dark {
+    .c-card {
+        @apply rounded border border-dark-primary;
 
-        .c-card__header {
-            @apply bg-purple-800;
-            @apply text-white;
-        }
-
-        .c-card__date {
-            @apply text-gray-500;
+        &__overlay {
+            @apply bg-gradient-to-b from-transparent to-black;
         }
     }
 }
