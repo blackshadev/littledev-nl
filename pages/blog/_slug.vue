@@ -38,7 +38,11 @@ export default Vue.extend({
     @apply p-3;
 
     &__date {
-        @apply text-gray-600 text-sm;
+        @apply text-sub text-sm;
+
+        @screen dark {
+            @apply text-dark-sub;
+        }
     }
     &__header {
         h1 {

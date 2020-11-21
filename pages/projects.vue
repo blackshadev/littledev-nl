@@ -7,6 +7,7 @@
         >
             <project-card
                 class="p-projects__item__card"
+                :overlay="false"
                 :project="project"
             ></project-card>
         </div>
