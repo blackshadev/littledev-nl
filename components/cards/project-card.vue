@@ -1,6 +1,6 @@
 <template>
     <common-card class="c-project-card" :overlay="overlay">
-        <template v-slot:header>
+        <template #header>
             <div class="c-project-card__header">
                 <div class="c-project-card__title">
                     <p class="c-project-card__date">

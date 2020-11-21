@@ -1,6 +1,6 @@
 <template>
     <common-card class="c-blog-card" :overlay="true">
-        <template v-slot:header>
+        <template #header>
             <p class="c-blog-card__date">
                 {{ formattedPostDate }}
             </p>
