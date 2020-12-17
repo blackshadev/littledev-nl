@@ -30,7 +30,7 @@
     "@nuxtjs/fontawesome": "^1.1.2",
     "core-js": "^3.7.0",
     "dayjs": "^1.9.6",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.14.12",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0"
   },
