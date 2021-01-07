@@ -31,7 +31,7 @@
     "core-js": "^3.7.0",
     "dayjs": "^1.9.6",
     "nuxt": "^2.14.6",
-    "sass": "^1.29.0",
+    "sass": "^1.32.2",
     "sass-loader": "^10.1.0"
   },
   "devDependencies": {
