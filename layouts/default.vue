@@ -1,9 +1,10 @@
 <template>
     <div>
+        <a class="sr-only focus:not-sr-only" href="#content">Naar content</a>
         <main-navigation />
-        <div class="c-main-content container">
+        <main class="c-main-content container" id="content">
             <Nuxt />
-        </div>
+        </main>
     </div>
 </template>
 
