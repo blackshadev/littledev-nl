@@ -1,13 +1,13 @@
 <template>
-    <div :class="{ 'c-card': true, '-overlay': overlay }">
-        <div class="c-card__header">
+    <article :class="{ 'c-card': true, '-overlay': overlay }">
+        <header class="c-card__header">
             <slot name="header"></slot>
-        </div>
+        </header>
         <div class="c-card__content">
             <slot></slot>
         </div>
         <div v-if="overlay" class="c-card__overlay"></div>
-    </div>
+    </article>
 </template>
 
 <script lang="ts">

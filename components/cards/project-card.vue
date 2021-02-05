@@ -12,12 +12,20 @@
                 </div>
 
                 <div class="c-project-card__links">
-                    <a v-if="project.source" :href="project.source">
+                    <a
+                        v-if="project.source"
+                        :href="project.source"
+                        :title="'GitHub of ' + project.title"
+                    >
                         <font-awesome-icon
                             :icon="['fab', 'github']"
                         ></font-awesome-icon>
                     </a>
-                    <a v-if="project.url" :href="project.url">
+                    <a
+                        v-if="project.url"
+                        :href="project.url"
+                        :title="'Website of ' + project.title"
+                    >
                         <font-awesome-icon
                             :icon="['fas', 'link']"
                         ></font-awesome-icon>

@@ -1,15 +1,15 @@
 <template>
-    <div class="c-post">
-        <div class="c-post__header">
+    <article class="c-post">
+        <header class="c-post__header">
             <p class="c-post__date">{{ formattedContentDate }}</p>
             <h1>{{ content.title }}</h1>
-        </div>
+        </header>
 
         <div class="c-post__content">
             <p class="short">{{ content.description }}</p>
             <nuxt-content :document="content" />
         </div>
-    </div>
+    </article>
 </template>
 
 <script lang="ts">

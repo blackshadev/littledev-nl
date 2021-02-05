@@ -1,5 +1,5 @@
 <template>
-    <div class="p-projects">
+    <section class="p-projects">
         <div
             v-for="(project, index) in projects"
             :key="index"
@@ -11,7 +11,7 @@
                 :project="project"
             ></project-card>
         </div>
-    </div>
+    </section>
 </template>
 
 <script lang="ts">

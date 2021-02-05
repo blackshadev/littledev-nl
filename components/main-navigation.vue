@@ -21,7 +21,7 @@
                     >
                 </li>
                 <li>
-                    <a href="https://github.com/blackshadev/" alt="Github">
+                    <a href="https://github.com/blackshadev/" title="My Github">
                         <font-awesome-icon :icon="['fab', 'github']" />
                     </a>
                 </li>

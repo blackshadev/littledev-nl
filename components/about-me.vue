@@ -1,7 +1,7 @@
 <template>
     <div class="c-about-me">
         <div class="c-about-me__image">
-            <img :src="image" />
+            <img :src="image" alt="This is me" />
         </div>
         <p class="c-about-me__name">{{ name }}</p>
         <p class="c-about-me__subtitle">

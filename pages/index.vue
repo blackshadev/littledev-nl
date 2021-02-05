@@ -1,15 +1,17 @@
 <template>
     <div class="p-home">
-        <about-me
-            :name="aboutMe.name"
-            :image="aboutMe.image"
-            :subtitles="aboutMe.subtitles"
-            :dob="aboutMe.dob"
-        />
+        <article>
+            <about-me
+                :name="aboutMe.name"
+                :image="aboutMe.image"
+                :subtitles="aboutMe.subtitles"
+                :dob="aboutMe.dob"
+            />
+        </article>
         <div class="p-home__content">
             <nuxt-content :document="content" />
             <div class="p-home__recent">
-                <div class="p-home__recent__column">
+                <section class="p-home__recent__column">
                     <h2>
                         <nuxt-link to="/projects">Latest projects</nuxt-link>
                     </h2>
@@ -23,8 +25,8 @@
                             :overlay="true"
                         ></project-card>
                     </div>
-                </div>
-                <div class="p-home__recent__column">
+                </section>
+                <section class="p-home__recent__column">
                     <h2>
                         <nuxt-link to="/blog">Latest posts</nuxt-link>
                     </h2>
@@ -35,7 +37,7 @@
                     >
                         <blog-card :post="blog"></blog-card>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </div>
