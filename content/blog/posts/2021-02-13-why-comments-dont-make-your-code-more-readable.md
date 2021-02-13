@@ -8,17 +8,17 @@ tags:
     - tag: programming
 ---
 
-Bare in mind, this post this is my experience and opinion. If you don’t agree, that is fine. My point of view should still give you a good resource for how to write better comments.
+Bear in mind, this post reflects my experience and opinion. If you don’t agree, that is fine. My point of view should still give you a good resource for how to write better comments.
 
 ## The good
 
-Let’s start simple, why are comments good? Comments should make your code more readable and this is really important. Most programmers read more code than they write. When you are tracking a bug, adding features to existing code or reworking code. Tou will need to read allot of code. So our main goal with comments, should be to make your code easier to read.
+Let’s start simple, why are comments good? Comments should make your code more readable and this is really important. Most programmers read more code than they write. When you are tracking a bug, adding features to existing code or reworking code. You will need to read a lot of code. So our main goal with comments, should be to make your code easier to read.
 
 So a small summary above a function or a small part of code can be really handy. You can read the comment, and continue.
 
 ## The bad
 
-Let's take a look at the flip side of the coin, why are comments all that bad? Well first. people just over do it. Reading every, reading every , part of a, part of a, sentence, sentence, twice is, twice is, VERY ANNOYING. You see what I did there? I see this actually allot. Take a look at the code sample below as an example what I mean. Every line of comment in there could be read from the code alone. All comments are completely redundant and mirror the code. All comments duplicate what you can already read. Just like the last three sentences. And when you read allot of code, it just becomes a nuances.
+Let's take a look at the flip side of the coin, why are comments all that bad? Well first. People just over do it. Reading every, reading every, part of a, part of a, sentence, sentence, twice is, twice is, VERY ANNOYING. You see what I did there? I see this actually a lot. Take a look at the code sample below as an example what I mean. Every line of comment in there could be read from the code alone. All comments are completely redundant and mirror the code. All comments duplicate what you can already read. Just like the last three sentences. And when you read a lot of code, it just becomes a nuances.
 
 ```php
 /**
