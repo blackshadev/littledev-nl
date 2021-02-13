@@ -57,7 +57,7 @@ export default Vue.extend({
 
     &__title {
         @apply font-bold;
-        @apply m-0;
+        @apply m-0 mb-2;
         @apply text-primary;
 
         @screen dark {

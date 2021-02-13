@@ -46,6 +46,7 @@ ol {
 h1,
 h2,
 h3 {
+    @apply font-bold;
     @apply text-primary;
 
     @screen dark {
@@ -57,10 +58,7 @@ p a {
     @apply text-link;
 
     @screen dark {
-        a svg,
-        p a {
-            @apply text-dark-link;
-        }
+        @apply text-dark-link;
     }
 }
 

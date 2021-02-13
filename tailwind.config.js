@@ -14,8 +14,8 @@ module.exports = {
                 tag: colors.purple['300'],
                 nav: colors.purple['700'],
 
-                'dark-primary': colors.purple['700'],
-                'dark-link': colors.purple['500'],
+                'dark-primary': colors.purple['500'],
+                'dark-link': colors.purple['400'],
                 'dark-sub': colors.gray['300'],
                 'dark-tag': colors.purple['900'],
                 'dark-nav': colors.purple['800'],
