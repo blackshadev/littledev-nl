@@ -3,7 +3,7 @@ title: "Why comments don't make your code more readable"
 state: Published
 description: >-
     This statement seems really controversial, early on in my carrier I got told that every function should have a comment and commenting makes your code more readable. Now I am going to tell you why it really isn’t.
-date: '2021-02-13T11:11:00+02:00'
+date: '2021-02-13T11:11:00+01:00'
 tags:
     - tag: programming
 ---

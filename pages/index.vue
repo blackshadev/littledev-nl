@@ -47,10 +47,11 @@
 import Vue from 'vue'
 import { FIELDS } from '~/components/about-me.vue'
 import { extendTagsForPosts, getTagKeysFromPosts } from '~/helpers/tags'
-import { IPost, ITag, State } from '~/types/blog'
+import { IPost, ITag } from '~/types/blog'
+import getState from '~/helpers/published-state'
 
 export default Vue.extend({
-    async asyncData({ $content, params }) {
+    async asyncData({ $content, params, env }) {
         const content = await $content(`pages/home`).fetch()
         const aboutMe = await $content(`pages/about`).only(FIELDS).fetch()
         const recentProjects = await $content(`projects`)
@@ -58,7 +59,7 @@ export default Vue.extend({
             .limit(2)
             .fetch()
         const _recentBlogPosts = ((await $content(`blog/posts`)
-            .where({ state: { $eq: State.Published } })
+            .where({ state: { $in: getState(env.prod) } })
             .sortBy('date', 'desc')
             .limit(2)
             .fetch()) as any) as IPost[]
