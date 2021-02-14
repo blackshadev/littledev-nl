@@ -1,6 +1,6 @@
 const config = {
     env: {
-        dev: process.env.NODE_ENV !== 'production',
+        dev: false, // process.env.NODE_ENV !== 'production',
     },
     // Target (https://go.nuxtjs.dev/config-target)
     target: 'static',
