@@ -2,7 +2,7 @@
 title: "Why comments don't make your code more readable"
 state: Published
 description: >-
-    This statement seems really controversial, early on in my carrier I got told that every function should have a comment and commenting makes your code more readable. Now I am going to tell you why it really isn’t.
+    This statement seems really controversial, early on in my career I got told that every function should have a comment and commenting makes your code more readable. Now I am going to tell you why it really isn’t.
 date: '2021-02-13T11:11:00+01:00'
 tags:
     - tag: programming
@@ -18,7 +18,7 @@ So a small summary above a function or a small part of code can be really handy.
 
 ## The bad
 
-Let's take a look at the flip side of the coin, why are comments all that bad? Well first. People just over do it. Reading every, reading every, part of a, part of a, sentence, sentence, twice is, twice is, VERY ANNOYING. You see what I did there? I see this actually a lot. Take a look at the code sample below as an example what I mean. Every line of comment in there could be read from the code alone. All comments are completely redundant and mirror the code. All comments duplicate what you can already read. Just like the last three sentences. And when you read a lot of code, it just becomes a nuances.
+Let's take a look at the flip side of the coin, why are comments all that bad? Well first. People just over do it. Reading every, reading every, part of a, part of a, sentence, sentence, twice is, twice is, VERY ANNOYING. You see what I did there? I see this actually a lot. Take a look at the code sample below as an example what I mean. Every line of comment in there could be read from the code alone. All comments are completely redundant and mirror the code. All comments duplicate what you can already read. Just like the last three sentences. And when you read a lot of code, it just becomes a nuisance.
 
 ```php
 /**
@@ -54,7 +54,7 @@ class Customer
         }
 
         // Return sum of orders of loyalty points
-        return $lp;
+        return $loyaltyPoints;
     }
 }
 ```
@@ -87,11 +87,11 @@ Now, what can be said more? Well structurally commenting will make your code mor
 ...
 ```
 
-One last caveat. There is one exception: Optimized code. Within some code-bases you need to get the absolute best performance out of your code. Performance optimized code just isn’t the most readable, so a comment here and there will be usefull.
+One last caveat. There is one exception: Optimized code. Within some code-bases you need to get the absolute best performance out of your code. Performance optimized code just isn’t the most readable, so a comment here and there will be useful.
 
 ## Conclusion
 
-So I hope this gives you some thinking material. As hinted on the top, I will write a follow-up post about when to write comments and how to improve your code to make it more readable. But after reading this, you should be well on your way to think more critically about comments. The main three take aways are:
+So I hope this gives you some thinking material. I will write a follow-up post about how to write more readable code where I also will cover when to comment. But after reading this, you should be well on your way to think more critically about comments. The main three take aways are:
 
 -   Don't just add comments because of convention or because you can.
 -   Don't justify a comment for bad code, or the other way around. Just write better code.

@@ -30,16 +30,8 @@ h3 {
     @apply text-lg font-medium;
     @apply mt-4;
 }
-img[src*='right'] {
-    @apply float-right;
-}
 
 p {
-    @apply mb-3;
-}
-
-ol {
-    @apply list-decimal list-inside;
     @apply mb-3;
 }
 

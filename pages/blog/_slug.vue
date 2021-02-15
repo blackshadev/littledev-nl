@@ -54,6 +54,22 @@ export default Vue.extend({
         p {
             @apply mb-6;
         }
+
+        ::v-deep {
+            img[src*='right'] {
+                @apply float-right;
+            }
+
+            ol {
+                @apply list-decimal list-inside;
+                @apply mb-3;
+            }
+
+            ul {
+                @apply mb-3 ml-3;
+                @apply list-inside list-disc;
+            }
+        }
     }
 }
 </style>
