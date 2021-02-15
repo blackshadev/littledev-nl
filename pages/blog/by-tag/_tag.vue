@@ -13,7 +13,7 @@ export default Vue.extend({
         const basePosts = ((await $content(`blog/posts`)
             .where({
                 'tags.tag': { $contains: params.tag },
-                state: { $in: getState(env.prod) },
+                state: { $in: getState(env.env) },
             })
             .sortBy('date', 'desc')
             .fetch()) as any) as IPost[]

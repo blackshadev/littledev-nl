@@ -59,7 +59,7 @@ export default Vue.extend({
             .limit(2)
             .fetch()
         const _recentBlogPosts = ((await $content(`blog/posts`)
-            .where({ state: { $in: getState(env.prod) } })
+            .where({ state: { $in: getState(env.env) } })
             .sortBy('date', 'desc')
             .limit(2)
             .fetch()) as any) as IPost[]

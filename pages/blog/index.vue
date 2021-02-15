@@ -14,7 +14,7 @@ import getState from '~/helpers/published-state'
 export default Vue.extend({
     async asyncData({ $content, params, env }) {
         const basePosts = ((await $content(`blog/posts`)
-            .where({ state: { $in: getState(env.prod) } })
+            .where({ state: { $in: getState(env.env) } })
             .sortBy('date', 'desc')
             .fetch()) as any) as IPost[]
         const allTags = ((await $content(`blog/tags`)
