@@ -1,6 +1,6 @@
 ---
 title: 'Readable code'
-state: Draft
+state: Published
 description: >-
     Ever read code from your past self or an opensource package and taught "What does this code do?" over and over again? Well you are not alone, but there are things you can do to improve the readability and maintainability without littering the code with pages of documentation comments.
 date: '2021-02-14T14:13:00+01:00'
