@@ -1,6 +1,5 @@
 <template>
     <div>
-        {{ env }}
         <blog-posts :posts="posts" />
     </div>
 </template>

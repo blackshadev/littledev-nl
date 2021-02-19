@@ -1,21 +1,21 @@
 ---
-title: 'Readable code'
+title: 'Tips for Readable code'
 state: Published
 description: >-
-    Ever read code from your past self or an opensource package and taught "What does this code do?" over and over again? Well you are not alone, but there are things you can do to improve the readability and maintainability without littering the code with pages of documentation comments.
+    Have you ever read code from your past self or an opensource package and thought "What does this code do?" over and over again? Well you are not alone, but there are things you can do to improve the readability and maintainability without littering the code with pages of documentation comments.
 date: '2021-02-19T16:51:00+01:00'
 tags:
     - tag: programming
 ---
 
-Developers tend to read more code than they write. Thus every improvement to make our code more readable is a huge bonus for our future selves and our fellow developer. Even more so with open source, where readability is a must, no body is going to contribute if your code is a complete mess and unreadable. I am not going to say we need to comment more or anything, comments are not the best tool to make your code more readable. You can read more about why I think that in [another blog post](2021-02-13-why-comments-dont-make-your-code-more-readable).
+Developers tend to read more code than they write. Thus every improvement to make our code more readable is a huge bonus for our future selves and our fellow developers. Even more so with open source, where readability is a must, nobody is going to contribute if your code is a complete mess and unreadable. I am not going to say we need to comment more or anything, comments are not the best tool to make your code more readable. You can read more about why I think that in [another blog post](/blog/2021-02-13-why-comments-dont-make-your-code-more-readable).
 
 An important thing is that your programs can tell a story. As Robin C. Martin put's it in his book 'clean code': Master programmers think of systems as stories to be told, not programs to be written. But this doesn't tell us how we do it, so let's start!
 
 ## Don't write for yourself
 
 The first thing to realize is the fact that you should not write code for yourself. The fact that you understand what you did is simply not good enough. Always ask yourself if other contributors will understand the code? And most importantly if far-less experienced coders will understand your code. If so, your future self will most certainly understand the code.
-I cannot iterate this enough though. If you assume the readers of your code are really, really stupid. You will be able to understand the code with ease when you take a fresh look at it in the future. So lay-off on all your fancy language tricks and one-liners, inexperienced coders don't get that. Don't put personal jokes or references in the codebase, nobody besides you will understand it. So keep it simple.
+I cannot iterate this enough though. If you assume the readers of your code are really, really stupid. You will be able to understand the code with ease when you take a fresh look at it in the future. So lay off on all your fancy language tricks and one-liners, inexperienced coders don't get that. Don't put personal jokes or references in the codebase, nobody besides you will understand it. So keep it simple.
 
 ## Know your tools
 
@@ -32,7 +32,7 @@ My readable code toolbox consists of the following:
 
 First up and most importantly: naming. You probably heard this a lot already, but good names will do a lot for readability. In most languages you can name various things like: Variables, Functions and classes (or/and types). But what are considered good names?
 
-Well, we want to pack as much clear and readable information in all names if possible. So things like `i` , `iX`, `a` or other very small variable names are not good enough. With one exception however. It is very common to use `i` as a counter in a for loop. This has become so iconic, that this packs so much information in it, that it is fine. Abbreviations should be avoided most of the time since it is hard to read and understand it in code. There are exceptions however common or domain specific abbreviations can be used, everybody should know common abbreviations like HTTP and FTP and typing them out is just silly. But made up abbreviations, for model names or from outside of your domain should never be used, they tent to introduce confusion and these are hard to read for new developers.
+Well, we want to pack as much clear and readable information in all names if possible. So things like `i` , `iX`, `a` or other very small variable names are not good enough. With one exception however. It is very common to use `i` as a counter in a for loop. This has become so iconic, that this packs so much information in it, that it is fine. Abbreviations should be avoided most of the time since it is hard to read and understand it in code. There are exceptions however common or domain specific abbreviations can be used, everybody should know common abbreviations like HTTP and FTP and typing them out is just silly. But made up abbreviations, for model names or from outside of your domain should never be used, they tend to introduce confusion and these are hard to read for new developers.
 
 ### Function
 
