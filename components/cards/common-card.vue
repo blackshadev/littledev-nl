@@ -55,7 +55,7 @@ export default Vue.extend({
         @apply rounded border border-dark-primary;
 
         &__overlay {
-            @apply bg-gradient-to-b from-transparent to-black;
+            @apply bg-gradient-to-b from-transparent to-gray-900;
         }
     }
 }

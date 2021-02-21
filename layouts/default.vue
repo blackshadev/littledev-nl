@@ -56,8 +56,8 @@ p a {
 
 @screen dark {
     body {
-        @apply bg-black;
-        @apply text-white;
+        @apply bg-gray-900;
+        @apply text-gray-100;
     }
 }
 </style>

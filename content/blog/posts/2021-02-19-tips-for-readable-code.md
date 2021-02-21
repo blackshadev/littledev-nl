@@ -2,7 +2,7 @@
 title: 'Tips for Readable code'
 state: Published
 description: >-
-    Have you ever read code from your past self or an opensource package and thought "What does this code do?" over and over again? Well you are not alone, but there are things you can do to improve the readability and maintainability without littering the code with pages of documentation comments.
+    Have you ever read code from your past self or an open source package and thought "What does this code do?" over and over again? Well you are not alone, but there are things you can do to improve the readability and maintainability without littering the code with pages of documentation comments.
 date: '2021-02-19T16:51:00+01:00'
 tags:
     - tag: programming
@@ -19,7 +19,7 @@ I cannot iterate this enough though. If you assume the readers of your code are 
 
 ## Know your tools
 
-Knowing which tools you have to make your code more readable is half the battle. If you assume you can only add comments, you probabily will end with allot of readable content, but not with readable code.
+Knowing which tools you have to make your code more readable is half the battle. If you assume you can only add comments, you probabily will end with a lot of readable content, but not with readable code.
 My readable code toolbox consists of the following:
 
 -   Naming
@@ -41,7 +41,7 @@ Next on the list is putting code in named functions. So we developers got this t
 Take for example the snipped below.
 
 ```php
-public function calculateAndAssignLoyaltyPoints($order) {
+public function calculateAndAssignLoyaltyPoints(Order $order): void {
     $this->promotionApplicator->apply($order);
 
     if ($order->paymentState === 'completed') {
@@ -50,31 +50,31 @@ public function calculateAndAssignLoyaltyPoints($order) {
 }
 ```
 
-In the above code sample the `loyaltyAssigner`, `order` and `promotionApplicator` are part library (and thus immutable code). The code is pretty small already so what can we do to make this understandable. I know what this does, but without checking the promotionApplicator and loyaltyAssigner you will have a pretty hard time understanding. Let me clarify it a bit.
+In the above code sample the `loyaltyAssigner`, `order` and `promotionApplicator` are part library (so for simplicity lets consider them immutable). The code is pretty small already so what can we do to make this understandable. I know what this does, but without checking the promotionApplicator and loyaltyAssigner you will have a pretty hard time understanding. Let me clarify it a bit.
 
 ```php
-public function calculateAndAssignLoyaltyPoints($order) {
+public function calculateAndAssignLoyaltyPoints(Order $order): void {
     $this->calculateAndApplyOrderPromotions($order);
 
     if ($this->orderIsPaid($order)) {
-        $this->assignLoyaltyPointsToCustomer($order);
+        $this->assignLoyaltyPointsToCustomerFromOrder($order);
     }
 }
 
-private function calculateAndApplyOrderPromotions($oder) {
+private function calculateAndApplyOrderPromotions(Order $oder): void {
     $this->promotionApplicator->apply($order);
 }
 
-private function orderIsPaid($order) {
+private function orderIsPaid(Order $order): bool {
     return $order->paymentState === 'completed';
 }
 
-private function assignOrderLoyaltyPointsToCustomer($order) {
+private function assignLoyaltyPointsToCustomerFromOrder(Order $order): void {
     $this->loyaltyAssigner->assign($order);
 }
 ```
 
-This should be way easier to read. In the new version we even have extra information about what is happening, namely: Assigning loyalty points to a customer. We could rename the `loyaltyAssigner` to something like a `customerLoyaltyAssigner` but to me this doesn't make it allot better. I don't want to deviate from the names to much, because the class of the loyaltyAssigner is named LoyaltyAssigner. So naming it similar can be pretty beneficial for readability and understanding the code.
+This should be way easier to read. In the new version we even have extra information about what is happening, namely: Assigning loyalty points to a customer. We could rename the `loyaltyAssigner` to something like a `customerLoyaltyAssigner` but to me this doesn't make it allot better. I don't want to deviate from the names to much, because the class of the loyaltyAssigner is named LoyaltyAssigner. So naming it similar can be pretty beneficial for readability and understanding the code. One note, if the `orderIsPaid` can be added to the `Order` class that would be better, but in this example we assumed `Order` is immutable for us.
 
 ### Restructuring
 
@@ -88,7 +88,7 @@ Let look at a small but exaggerated example.
  * For running locally you must be an admin
  * Otherwise check the resource owner against the user
  */
-public function allowed($user, $resource) {
+public function allowed(User $user, Resource $resource): bool {
     if ($user->ip !== '127.0.0.1' && $user->role !== 'admin') {
         return $user->id !== $resource->user_id;
     }
@@ -100,7 +100,7 @@ public function allowed($user, $resource) {
 Clearly from the descriptive comment the code is. But it doesn't follow the same narrative? I'd say: yes, we can. Lets restructure the code such that all edge causes are clearly visible.
 
 ```php
-public function allowed($user, $resource) {
+public function allowed(User $user, Resource $resource): bool {
     if ($user->role === 'admin') {
         return true;
     }
@@ -112,7 +112,7 @@ public function allowed($user, $resource) {
 }
 ```
 
-Now it follows the narrative more closely and we made all edge cases visible while out 'general' case is at the end. Of course we can go further and introduce some variables to make it even better, but that is besides the point. Another easy way of restructuring code is bringing edge cases more on top and make return clauses simple. This way it is easier to read and explain. Nobody can explain a function whom returns a composition of multiple conditions.
+Now it follows the narrative more closely and we made all edge cases visible, while the 'general' case is at the end. Of course we can go further and introduce some variables to make it even better, but that is besides the point. Another easy way of restructuring code is bringing edge cases more on top and make return clauses simple. This way it is easier to read and explain. Nobody can explain a function whom returns a composition of multiple conditions.
 
 ### Refactoring
 
@@ -130,12 +130,12 @@ What I think is cleaner, write to code as clean as possible, add a comment where
 
 So we know what tools we have, but knowing when to use them is not easy. Not to worry, I got a easy starting out strategy. With it you can get a feeling and over time you will start rewriting your code less and less.
 
-Write your code, as you would. Re-reading the code and think what you'd want to clarify or how you would explain it. Explain the code in a (temporary). Now start rewriting your code with the tools above to incorporate as much of the comments as possible in you code. Lastly, remove the comment because it is now redundant.
+Write your code, as you would. Re-reading the code and think what you'd want to clarify or how you would explain it. You can even write it out in a temporary comment if it helps you. Now start rewriting your code with the tools above to incorporate as much of the explanation as possible in you code. Lastly, remove the comment because it is now redundant.
 
 Most of the time it is fairly easy with just some variable renames. But sometimes you will need to restructure the code, put things in private function to clarify the behavior.
 
 ## Liked what you read?
 
-I hope this whole tirade was informational for people, this was my view on writing readable code. There are, ofcourse, many other views on this subject, so don't shy away from reading other people's thoughts. For me books like 'clean code' by Robert C Martin and The Art of Readable Code by Dustin Boswell and Trevor Foucher were a very good resource to get more grip on writing readable code.
+I hope this whole tirade was informational for people, this was my view on writing readable code. There are, of course, many other views on this subject, so don't shy away from reading other people's thoughts. For me books like 'clean code' by Robert C Martin and The Art of Readable Code by Dustin Boswell and Trevor Foucher were a very good resource to get more grip on writing readable code.
 
 Anyway, happy coding!
