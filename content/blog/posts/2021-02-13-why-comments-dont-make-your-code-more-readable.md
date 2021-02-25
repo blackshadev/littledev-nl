@@ -91,7 +91,7 @@ One last caveat. There is one exception: Optimized code. Within some code-bases 
 
 ## Conclusion
 
-So I hope this gives you some thinking material. I have written a [follow-up post](/blog/2021-02-19-readable-code) about how to write more readable code, in which I also cover when to comment. But after reading this, you should be well on your way to think more critically about comments. The main three takeaways are:
+So I hope this gives you some thinking material. I have written a [follow-up post](/blog/2021-02-19-tips-for-readable-code) about how to write more readable code, in which I also cover when to comment. But after reading this, you should be well on your way to think more critically about comments. The main three takeaways are:
 
 -   Don't just add comments because of convention or because you can.
 -   Don't justify a comment for bad code, or the other way around. Just write better code.
