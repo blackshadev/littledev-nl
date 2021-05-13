@@ -58,15 +58,15 @@ export default Vue.extend({
             .sortBy('date', 'desc')
             .limit(2)
             .fetch()
-        const _recentBlogPosts = ((await $content(`blog/posts`)
+        const _recentBlogPosts = (await $content(`blog/posts`)
             .where({ state: { $in: getState(env.env) } })
             .sortBy('date', 'desc')
             .limit(2)
-            .fetch()) as any) as IPost[]
-        const tagsFromRecentPosts = ((await $content(`blog/tags`)
+            .fetch()) as any as IPost[]
+        const tagsFromRecentPosts = (await $content(`blog/tags`)
             .where({ key: { $in: getTagKeysFromPosts(_recentBlogPosts) } })
             .sortBy('title', 'asc')
-            .fetch()) as any) as ITag[]
+            .fetch()) as any as ITag[]
 
         const recentBlogPosts = extendTagsForPosts(
             _recentBlogPosts,

@@ -2,7 +2,7 @@
     <div>
         <a class="sr-only focus:not-sr-only" href="#content">Naar content</a>
         <main-navigation />
-        <main class="c-main-content container" id="content">
+        <main id="content" class="c-main-content container">
             <Nuxt />
         </main>
     </div>
