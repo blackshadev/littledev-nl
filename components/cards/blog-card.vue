@@ -37,6 +37,7 @@ import Vue from 'vue'
 import { formatAsDate } from '~/helpers/datetime'
 
 export default Vue.extend({
+    name: 'BlogCard',
     props: {
         post: {
             required: true,

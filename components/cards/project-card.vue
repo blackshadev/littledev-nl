@@ -73,6 +73,7 @@ interface IProps {
 }
 
 export default Vue.extend<{}, {}, {}, IProps>({
+    name: 'ProjectCard',
     props: {
         project: {
             type: Object,
