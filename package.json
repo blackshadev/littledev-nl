@@ -27,7 +27,7 @@
     "dayjs": "^1.10.4",
     "nuxt": "^2.15.6",
     "prism-themes": "^1.7.0",
-    "sass": "^1.32.13",
+    "sass": "^1.35.2",
     "sass-loader": "^10.1.0"
   },
   "devDependencies": {
