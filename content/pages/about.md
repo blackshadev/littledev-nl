@@ -31,6 +31,10 @@ skills:
       type: framework
     - description: NuxtJS
       type: framework
+    - description: React
+      type: framework
+    - description: Electron
+      type: framework
     - description: Tailwind
       type: framework
     - description: QT
