@@ -23,6 +23,8 @@ skills:
       type: language
     - description: NodeJS
       type: language
+    - description: Go
+      type: language
     - description: VueJS
       type: framework
     - description: Angular
