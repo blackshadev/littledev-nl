@@ -58,17 +58,10 @@
 <script lang="ts">
 import Vue from 'vue'
 import { formatAsDate } from '~/helpers/datetime'
+import { Project } from '~/types/project'
 
 interface IProps {
-    project: {
-        title: string
-        description: string
-        date: string
-        url: string
-        source: string
-        languages: string[]
-        tech: string[]
-    }
+    project: Project
     overlay: boolean
 }
 

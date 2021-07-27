@@ -1,5 +1,5 @@
 ---
-title: Littledivelog (server)
+title: Littledivelog (server) v1
 description: >-
     The backend for the divelog webapp which I use to log my own dives. I also have a client to
     download dives from my dive computer to the webapp
