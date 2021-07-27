@@ -5,7 +5,7 @@ description: >-
 date: '2021-03-18T00:00:00'
 source: 'https://github.com/blackshadev/libdivecomputerjs'
 languages:
-    - C++
+    - C/C++
     - Javascript
     - Typescript
 tech:
