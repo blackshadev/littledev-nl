@@ -7,6 +7,7 @@
             :subtitles="content.subtitles"
         />
         <div class="p-about__content">
+            <h1>About me</h1>
             <nuxt-content :document="content" />
             <div class="p-about__skills">
                 <div class="p-about__me__skills_languages">

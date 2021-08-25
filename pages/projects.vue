@@ -30,17 +30,20 @@
                 {{ tech.value }} ({{ tech.count }})
             </button>
         </aside>
-        <div class="p-projects__items">
-            <div
-                v-for="(project, index) in projects"
-                :key="index"
-                class="p-projects__item"
-            >
-                <project-card
-                    class="p-projects__item__card"
-                    :overlay="false"
-                    :project="project"
-                ></project-card>
+        <div class="p-projects__container">
+            <h1>Projects</h1>
+            <div class="p-projects__items">
+                <div
+                    v-for="(project, index) in projects"
+                    :key="index"
+                    class="p-projects__item"
+                >
+                    <project-card
+                        class="p-projects__item__card"
+                        :overlay="false"
+                        :project="project"
+                    ></project-card>
+                </div>
             </div>
         </div>
     </section>
@@ -142,6 +145,10 @@ export default Vue.extend<
 
 <style lang="scss" scoped>
 .p-projects {
+    h1 {
+        @apply mx-4;
+    }
+
     @screen lg {
         @apply grid grid-cols-4;
     }
@@ -170,13 +177,15 @@ export default Vue.extend<
         }
     }
 
-    &__items {
-        @apply flex flex-wrap;
-        @apply p-3;
-
+    &__container {
         @screen lg {
             @apply col-span-3;
         }
+    }
+
+    &__items {
+        @apply flex flex-wrap;
+        @apply p-3;
     }
 
     &__item {

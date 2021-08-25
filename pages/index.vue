@@ -9,6 +9,7 @@
             />
         </article>
         <div class="p-home__content">
+            <h1>Littledev</h1>
             <nuxt-content :document="content" />
             <div class="p-home__recent">
                 <section class="p-home__recent__column">
