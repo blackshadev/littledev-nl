@@ -28,7 +28,7 @@
     "nuxt": "^2.15.7",
     "prism-themes": "^1.8.0",
     "sass": "^1.36.00",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^12.2.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.7",
