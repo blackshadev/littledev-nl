@@ -95,10 +95,12 @@ export default Vue.extend<{}, {}, {}, IProps>({
     &__header {
         @apply flex justify-between;
     }
+
     &__links {
         @apply mr-2;
         @apply text-lg;
     }
+
     &__date {
         @apply m-0;
         @apply text-sub text-sm;
@@ -107,6 +109,7 @@ export default Vue.extend<{}, {}, {}, IProps>({
             @apply text-dark-sub;
         }
     }
+
     &__title h3 {
         @apply font-bold;
         @apply m-0;
@@ -116,6 +119,7 @@ export default Vue.extend<{}, {}, {}, IProps>({
             @apply text-dark-primary;
         }
     }
+
     &__content {
         @apply pb-4;
         @apply flex flex-wrap;
@@ -124,6 +128,7 @@ export default Vue.extend<{}, {}, {}, IProps>({
             @apply w-full;
             @apply pb-6;
         }
+
         &__technologies {
             @apply w-1/2;
 
