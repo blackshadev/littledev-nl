@@ -44,6 +44,7 @@ export default Vue.extend({
             @apply text-dark-sub;
         }
     }
+
     &__header {
         h1 {
             @apply mt-0;

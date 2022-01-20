@@ -152,6 +152,7 @@ export default Vue.extend<
     @screen lg {
         @apply grid grid-cols-4;
     }
+
     &__filters {
         @apply mb-4;
 

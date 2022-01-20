@@ -22,10 +22,12 @@ h1 {
     @apply text-2xl font-bold;
     @apply my-3;
 }
+
 h2 {
     @apply text-xl font-medium;
     @apply mt-4;
 }
+
 h3 {
     @apply text-lg font-medium;
     @apply mt-4;
@@ -45,6 +47,7 @@ h3 {
         @apply text-dark-primary;
     }
 }
+
 a svg,
 p a {
     @apply text-link;
