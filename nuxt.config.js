@@ -26,6 +26,16 @@ export default function () {
                 },
             ],
             link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
+            script:
+                process.env.NODE_ENV === 'production'
+                    ? [
+                          {
+                              src: 'https://plausible.littledev.nl/js/plausible.js',
+                              defer: true,
+                              'data-domain': 'littledev.nl',
+                          },
+                      ]
+                    : undefined,
         },
 
         // Global CSS (https://go.nuxtjs.dev/config-css)
