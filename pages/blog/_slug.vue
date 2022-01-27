@@ -1,6 +1,7 @@
 <template>
     <article class="c-post">
         <header class="c-post__header">
+            <img v-if="image" :src="image" />
             <p class="c-post__date">{{ formattedContentDate }}</p>
             <h1>{{ content.title }}</h1>
         </header>
@@ -26,6 +27,13 @@ export default Vue.extend({
         }
     },
     computed: {
+        image() {
+            if (!this.$data.content.image) {
+                return undefined
+            }
+
+            return require(`~/assets/images/blogs/${this.$data.content.image}`)
+        },
         formattedContentDate() {
             return formatAsDate(this.$data.content.date)
         },
@@ -48,6 +56,10 @@ export default Vue.extend({
     &__header {
         h1 {
             @apply mt-0;
+        }
+
+        img {
+            @apply w-full h-96 object-cover object-center mb-6 rounded shadow;
         }
     }
 
