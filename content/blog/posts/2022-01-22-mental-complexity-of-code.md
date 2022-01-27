@@ -1,10 +1,10 @@
 ---
-title: 'Keep an eye on the mental load'
-state: Draft
+title: 'The mental strain of code'
+state: Published
 description: >-
-    Programmers often forget the mental of the software they build. With every addition in building blocks, layers, new language constructs or helper functions this mental load increases. The mental load increases ten fold when add features or add constraints on some shared context within your application. But how to keep track of it?
+    Programmers often forget the mental complexity of the software they build. With every addition this mental complexity tend to increase. The mental complexity increases ten fold when add features or add constraints on some shared context within your application. But when does it increase, and when does it becomes a strain.
 date: '2022-01-22T14:06:00+01:00'
-image: 2022-01-22-mental-load.jpg
+image: 2022-01-22-mental-complexity-of-code.jpg
 tags:
     - tag: programming
 ---
