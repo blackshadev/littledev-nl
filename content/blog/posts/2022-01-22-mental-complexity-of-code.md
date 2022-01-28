@@ -1,19 +1,17 @@
 ---
-title: 'The mental strain of code'
+title: 'The mental complexity of code'
 state: Published
 description: >-
-    Programmers often forget the mental complexity of the software they build. With every addition this mental complexity tend to increase. The mental complexity increases ten fold when add features or add constraints on some shared context within your application. But when does it increase, and when does it becomes a strain.
+    Most programmer know not keep global or shared state, and when you do, do it so less as possible. But why should we not? Why is it so bad to use shared state and how does it relate to other constructs you may not expect.
 date: '2022-01-22T14:06:00+01:00'
 image: 2022-01-22-mental-complexity-of-code.jpg
 tags:
     - tag: programming
 ---
 
-Most programmer know not keep global or shared state, and when you do, do it so less as possible. But why should we not? Why is it so bad to use shared state and how does it relate to other constructs you may not expect.
+Programmers often forget that we tend to read more code than we write. But what they forget more often, is how changes affect the mental effort required to understand the code. I refer to this as mental complexity. This mental complexity tend to increase with every addition, it increases ten fold when adding features or adding constraints on some shared context within your application. But when does it increase the least? And when does it becomes a strain? Even if we put all consistency and concurrency aside, shared state is often deemed as bad. And I share this view, but not because it is a common source of bugs. Using shared state does not introduce a bug, the bugs are a symptom of something else. The underlying issue all comes down to the strain it puts on your mental model. 
 
-Even if we through all consistency and concurrency aside, shared state is often deemed as bad. And I share this view, but not because it is a common source of bugs. Using shared state does not introduce a bug, the bugs are a symptom of something else. The underlying issue all comes down to the strain it puts on your mental model. 
-
-While programming you often build up a mental model of everything they need to know and use. For small programs everything fits perfectly in your brain and using shared state will not cause much issues (yet). But with every addition this mental model increases, causing for all kind of issues. Developers will start to forget that some things existed, forgetting to change some shared variable or forgetting that, no at this stage in the program, you cannot use that variable or it has been changed bu something else. The size and the burden of this mental model is increased by multiple factors on multiple different levels. Let's start by examining how we build this mental model when we try understand an arbitrary peace of code. 
+While programming you often build up a mental model of everything they need to know and use. For smaller programs everything fits perfectly in your brain and using shared state will not cause much issues (yet). But with every addition this mental model increases, causing for all kind of issues. Developers will start to forget that some things existed, forget to change some shared variable or forget that "no at this stage in the program, you cannot use that variable or it has been changed by something else". The size and the burden of this mental model is determined by multiple factors, on multiple different levels. Let's start by examining how we build this mental model when we try understand an arbitrary peace of code. 
 
 When you try to understand a certain piece of code, you'd often look at specific units like, a class, a method or a function. Each of these have there own 'context'. This context is a combination of scope, the state of everything in scope and how this state changes over time. With scope we mean every variable, class and function a certain unit of code uses. The scoping rules is mostly depend on the rules of your programming language, but these are consistent throughout your code. In contrast your state changes all the time. The current function can change local variables, variables outside it's local scope or through a reference passed as an argument. 
 

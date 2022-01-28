@@ -2,11 +2,9 @@
 const { colors } = require('tailwindcss/defaultTheme')
 
 module.exports = {
+    darkMode: 'class',
     theme: {
         extend: {
-            screens: {
-                dark: { raw: '(prefers-color-scheme: dark)' },
-            },
             colors: {
                 primary: colors.purple['900'],
                 link: colors.purple['800'],

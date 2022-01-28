@@ -84,7 +84,7 @@ export default function () {
         build: {},
         fontawesome: {
             icons: {
-                solid: ['faLink'],
+                solid: ['faLink', 'faSun', 'faMoon'],
                 regular: [],
                 brands: ['faGithub'],
             },

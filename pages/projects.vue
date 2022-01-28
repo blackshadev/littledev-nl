@@ -163,17 +163,11 @@ export default Vue.extend<
         button {
             @apply px-4 py-2 m-2 rounded;
             @apply border-primary border text-primary;
-
-            @screen dark {
-                @apply border-dark-primary text-dark-primary;
-            }
+            @apply dark:border-dark-primary dark:text-dark-primary;
 
             &.--filled {
                 @apply bg-primary text-white;
-
-                @screen dark {
-                    @apply bg-dark-primary text-black;
-                }
+                @apply dark:text-black dark:bg-dark-primary;
             }
         }
     }

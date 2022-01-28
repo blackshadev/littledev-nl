@@ -43,14 +43,11 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .c-post {
-    @apply p-3;
+    @apply mx-20;
 
     &__date {
         @apply text-sub text-sm;
-
-        @screen dark {
-            @apply text-dark-sub;
-        }
+        @apply dark:text-dark-sub;
     }
 
     &__header {

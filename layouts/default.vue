@@ -41,26 +41,15 @@ h1,
 h2,
 h3 {
     @apply font-bold;
-    @apply text-primary;
-
-    @screen dark {
-        @apply text-dark-primary;
-    }
+    @apply text-primary dark:text-dark-primary;
 }
 
 a svg,
 p a {
-    @apply text-link;
-
-    @screen dark {
-        @apply text-dark-link;
-    }
+    @apply text-link dark:text-dark-link;
 }
 
-@screen dark {
-    body {
-        @apply bg-gray-900;
-        @apply text-gray-100;
-    }
+body {
+    @apply dark:bg-gray-900 dark:text-gray-100;
 }
 </style>

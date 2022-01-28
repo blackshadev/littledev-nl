@@ -75,19 +75,13 @@ export default Vue.extend<
 
     &__subtitle {
         @apply text-sub;
-
-        @screen dark {
-            @apply text-dark-sub;
-        }
+        @apply dark:text-dark-sub;
     }
 
     &__dob {
         @apply text-sub;
+        @apply dark:text-dark-sub;
         @apply text-sm;
-
-        @screen dark {
-            @apply text-dark-sub;
-        }
     }
 
     p {

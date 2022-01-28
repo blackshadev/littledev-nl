@@ -27,6 +27,7 @@ export default Vue.extend({
 .c-card {
     @apply relative;
     @apply rounded border border-primary;
+    @apply dark:border-dark-primary;
     @apply w-full;
     @apply shadow-md;
     @apply overflow-hidden;
@@ -47,16 +48,7 @@ export default Vue.extend({
         @apply h-8 w-full;
         @apply z-10;
         @apply bg-gradient-to-b from-transparent to-white;
-    }
-}
-
-@screen dark {
-    .c-card {
-        @apply rounded border border-dark-primary;
-
-        &__overlay {
-            @apply bg-gradient-to-b from-transparent to-gray-900;
-        }
+        @apply dark:to-gray-900;
     }
 }
 </style>

@@ -103,21 +103,13 @@ export default Vue.extend<{}, {}, {}, IProps>({
 
     &__date {
         @apply m-0;
-        @apply text-sub text-sm;
-
-        @screen dark {
-            @apply text-dark-sub;
-        }
+        @apply text-sub text-sm dark:text-dark-sub;
     }
 
     &__title h3 {
         @apply font-bold;
         @apply m-0;
-        @apply text-primary;
-
-        @screen dark {
-            @apply text-dark-primary;
-        }
+        @apply text-primary dark:text-dark-primary;
     }
 
     &__content {
@@ -133,11 +125,7 @@ export default Vue.extend<{}, {}, {}, IProps>({
             @apply w-1/2;
 
             h3 {
-                @apply text-sub font-medium;
-
-                @screen dark {
-                    @apply text-dark-sub;
-                }
+                @apply text-sub font-medium dark:text-dark-sub;
             }
 
             ul {

@@ -25,17 +25,55 @@
                         <font-awesome-icon :icon="['fab', 'github']" />
                     </a>
                 </li>
+                <li>
+                    <button @click="toggleDarkMode">
+                        <font-awesome-icon :icon="['fas', toggleIcon]" />
+                    </button>
+                </li>
             </ul>
         </nav>
     </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+    data() {
+        return {
+            isDark: false,
+        }
+    },
+    computed: {
+        toggleIcon() {
+            return this.$data.isDark ? 'moon' : 'sun'
+        },
+    },
+    watch: {
+        isDark(val) {
+            document.documentElement.classList.toggle('dark', val)
+            localStorage.setItem('theme', val ? 'dark' : 'light')
+        },
+    },
+    beforeMount() {
+        this.isDark =
+            localStorage.getItem('theme') === 'dark' ||
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+    },
+    methods: {
+        toggleDarkMode() {
+            this.isDark = !this.isDark
+        },
+    },
+})
+</script>
+
 <style lang="scss" scoped>
 .c-main-navigation {
-    @apply bg-nav;
+    @apply bg-nav dark:bg-dark-nav;
     @apply py-3;
 
     a,
-    a svg {
+    li svg {
         @apply text-white no-underline;
     }
 
@@ -59,10 +97,6 @@
                 @apply underline;
             }
         }
-    }
-
-    @screen dark {
-        @apply bg-dark-nav;
     }
 }
 </style>

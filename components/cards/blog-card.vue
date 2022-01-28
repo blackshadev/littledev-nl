@@ -59,30 +59,18 @@ export default Vue.extend({
     &__title {
         @apply font-bold;
         @apply m-0 mb-2;
-        @apply text-primary;
-
-        @screen dark {
-            @apply text-dark-primary;
-        }
+        @apply text-primary dark:text-dark-primary;
     }
 
     &__date {
-        @apply text-sub text-sm;
+        @apply text-sub text-sm dark:text-dark-sub;
         @apply m-0;
-
-        @screen dark {
-            @apply text-dark-sub;
-        }
     }
 
     &__tag {
         @apply mr-1 p-1;
-        @apply bg-tag;
+        @apply bg-tag dark:bg-dark-tag;
         @apply rounded;
-
-        @screen dark {
-            @apply bg-dark-tag;
-        }
     }
 }
 </style>

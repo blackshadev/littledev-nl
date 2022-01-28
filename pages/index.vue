@@ -106,10 +106,7 @@ export default Vue.extend({
             @apply font-bold;
             @apply mb-1 pl-3;
             @apply text-primary;
-
-            @screen dark {
-                @apply text-dark-primary;
-            }
+            @apply dark:text-dark-primary;
         }
 
         &__column {
