@@ -10,6 +10,7 @@ export default function Layout({ children }: PropsWithChildren) {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
+                <title>Littledev</title>
             </Head>
             <a className="sr-only focus:not-sr-only" href="#content">
                 Naar content

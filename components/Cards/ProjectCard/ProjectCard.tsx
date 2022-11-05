@@ -48,24 +48,26 @@ export default function ProjectCard({
                 </div>
             </header>
             <div className="overflow-hidden flex-shrink">{description}</div>
-            <div className="flex flex-wrap flex-row">
-                <div className="w-1/2">
-                    <h3>Languages</h3>
-                    <ul>
-                        {languages.map((lang) => (
-                            <li key={lang}>{lang}</li>
-                        ))}
-                    </ul>
+            {!withOverlay && (
+                <div className="flex flex-wrap flex-row">
+                    <div className="w-1/2">
+                        <h3>Languages</h3>
+                        <ul>
+                            {languages.map((lang) => (
+                                <li key={lang}>{lang}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="w-1/2">
+                        <h3>Tech</h3>
+                        <ul>
+                            {tech.map((tech) => (
+                                <li key={tech}>{tech}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
-                <div className="w-1/2">
-                    <h3>Tech</h3>
-                    <ul>
-                        {tech.map((tech) => (
-                            <li key={tech}>{tech}</li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
+            )}
         </CommonCard>
     );
 }
