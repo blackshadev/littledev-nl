@@ -49,7 +49,7 @@ jobs:
           server: littledev.nl
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "out"
+          local-dir: "dist"
           exclude: |
             **/.git*
             **/.git*/**

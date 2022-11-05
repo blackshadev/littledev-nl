@@ -1,4 +1,5 @@
 const withExportImages = require('next-export-optimize-images');
+const path = require('path');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

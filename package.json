@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "generate": "next build && next export && next-export-optimize-images",
+    "generate": "next build && next export && next-export-optimize-images && mv out/ dist/",
     "start": "next start",
     "lint": "next lint"
   },
