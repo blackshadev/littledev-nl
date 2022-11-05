@@ -1,22 +1,26 @@
-// tailwind.config.js
-const { colors } = require('tailwindcss/defaultTheme')
+/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
 
 module.exports = {
+    content: [
+        './pages/**/*.{js,ts,jsx,tsx}',
+        './components/**/*.{js,ts,jsx,tsx}',
+    ],
     darkMode: 'class',
     theme: {
         extend: {
             colors: {
-                primary: colors.purple['900'],
-                link: colors.purple['800'],
+                primary: colors.violet['900'],
+                link: colors.violet['800'],
                 sub: colors.gray['700'],
-                tag: colors.purple['300'],
-                nav: colors.purple['700'],
+                tag: colors.violet['300'],
+                nav: colors.violet['700'],
 
-                'dark-primary': colors.purple['500'],
-                'dark-link': colors.purple['400'],
+                'dark-primary': colors.violet['500'],
+                'dark-link': colors.violet['400'],
                 'dark-sub': colors.gray['300'],
-                'dark-tag': colors.purple['900'],
-                'dark-nav': colors.purple['800'],
+                'dark-tag': colors.violet['900'],
+                'dark-nav': colors.violet['800'],
             },
             fontFamily: {
                 fancy: ['Oxygen', 'sans-serif'],
@@ -24,4 +28,5 @@ module.exports = {
             },
         },
     },
-}
+    plugins: [],
+};

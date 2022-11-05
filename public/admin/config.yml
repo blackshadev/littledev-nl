@@ -1,0 +1,83 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "public/uploads"
+public_folder: "uploads"
+
+collections:
+  - name: "blog-tags"
+    label: "Blog Tags"
+    folder: "content/blog/tags"
+    create: true
+    fields:
+      - {label: Title, name: title, widget: string, required: true}
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string, required: true}
+      - {label: State, name: state, widget: select, options: [Draft, Published]}
+      - {label: Description, name: description, widget: text, required: true}
+      - {label: Publish date, name: date, widget: datetime}
+      - label: Tags
+        name: tags
+        widget: list
+        fields:
+          - name: tag
+            label: Tag
+            widget: relation
+            collection: 'blog-tags'
+            valueField: 'key'
+            searchFields: [title]
+            displayFields: [title]
+      - {label: Content, name: body, widget: markdown}
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    fields:
+      - {label: Title, name: title, widget: string, required: true}
+      - {label: Description, name: description, widget: text, required: true}
+      - {label: Source, name: source, widget: string}
+      - {label: URL, name: url, widget: string}
+      - {label: Publish date, name: date, widget: datetime}
+      - {label: Languages, name: languages, widget: list}
+      - {label: Technologies, name: tech, widget: list}
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "content/pages/home.md"
+        fields:
+          - {label: Title, name: title, widget: string, required: true}
+          - {label: Description, name: description, widget: text, required: true}
+          - {label: Content, name: body, widget: markdown}
+      - label: "About me"
+        name: "about"
+        file: "content/pages/about.md"
+        fields:
+          - {label: Title, name: title, widget: string, required: true}
+          - {label: Image, name: image, widget: image, required: true}
+          - {label: Name, name: name, widget: string}
+          - {label: Date of birth, name: dob, widget: date, required: true }
+          - {label: Content, name: body, widget: markdown}
+          - label: Subtitles
+            name: subtitles
+            widget: list
+            fields:
+              - {label: Description,  name: description, widget: string}
+          - label: Skills
+            name: skills
+            widget: list
+            fields:
+              - {label: Description,  name: description, widget: string}
+              - label: Type
+                name: type
+                widget: select
+                options: ['language', 'framework', 'other']
+
+

@@ -1,0 +1,30 @@
+@import './wysiwyg.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+    h1,
+    h2,
+    h3 {
+        @apply font-bold;
+        @apply text-primary dark:text-dark-primary;
+    }
+
+    h1 {
+        @apply text-2xl font-bold;
+        @apply my-3;
+    }
+
+    h2 {
+        @apply text-xl font-medium;
+        @apply mt-4;
+    }
+
+    h3 {
+        @apply text-lg font-medium;
+        @apply mt-4;
+    }
+}

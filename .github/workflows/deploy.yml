@@ -44,11 +44,21 @@ jobs:
         run: yarn generate
 
       - name: Upload
-        uses: sebastianpopp/ftp-action@releases/v2
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
-          host: littledev.nl
-          user: ${{ secrets.FTP_USERNAME }}
+          server: littledev.nl
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "dist"
+          local-dir: "dist"
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.well-known/**
+            **/.usermin/**
+            **/roundcube/**
+            **/stats/**
+            **/icon/**
+            **/awstats-icon
+            **/awstatsicons
 
 
