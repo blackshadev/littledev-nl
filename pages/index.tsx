@@ -15,11 +15,11 @@ type Props = {
 };
 export default function HomePage({ about, home, blogs, projects }: Props) {
     return (
-        <div className="flex ">
-            <article>
+        <div className="flex flex-wrap md:flex-nowrap">
+            <article className="max-w-full w-full md:max-w-none md:w-auto">
                 <AboutMe {...about} />
             </article>
-            <div className="p-6">
+            <div className="p-6 max-w-full md:max-w-none">
                 <h1>Littledev</h1>
                 <WYSIWYG>{home.content}</WYSIWYG>
                 <div className="mt-5 flex flex-wrap flex-row justify-evenly ">

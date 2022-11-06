@@ -1,7 +1,4 @@
 import getAboutMe, { About } from '../api/aboutMe';
-import { Blog, listBlogs } from '../api/blogs';
-import getContent, { Content } from '../api/content';
-import { listProjects, Project } from '../api/projects';
 import AboutMe from '../components/AboutMe/AboutMe';
 import WYSIWYG from '../components/WYSIWYG';
 
@@ -10,8 +7,8 @@ type Props = {
 };
 export default function AboutPage({ about }: Props) {
     return (
-        <div className="flex ">
-            <article>
+        <div className="flex flex-wrap md:flex-nowrap">
+            <article className="w-full md:w-auto">
                 <AboutMe {...about} />
             </article>
             <div className="p-6">

@@ -48,9 +48,9 @@ export default function ProjectListPage({ projects }: Props) {
     }, [selected, projects]);
 
     return (
-        <>
-            <h1>Projects</h1>
-            <aside role="search" className="mb-4">
+        <section className="mx-4 grid grid-cols-4 gap-4">
+            <h1 className="w-full col-span-full">Projects</h1>
+            <aside role="search" className="mb-4 col-span-full lg:col-span-1">
                 <h3>Languages</h3>
                 <Filters
                     values={languages}
@@ -76,8 +76,11 @@ export default function ProjectListPage({ projects }: Props) {
                     }
                 />
             </aside>
-            <ProjectList projects={filteredProjects} />
-        </>
+            <ProjectList
+                projects={filteredProjects}
+                className="col-span-full lg:col-span-3"
+            />
+        </section>
     );
 }
 

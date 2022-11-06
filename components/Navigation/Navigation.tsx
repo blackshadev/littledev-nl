@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useEffect, useState } from 'react';
 import Link from '../Link';
 import { DiGithubBadge } from 'react-icons/di';
 import { HiMoon } from 'react-icons/hi2';
@@ -16,10 +16,37 @@ function NavLink({ href, children }: PropsWithChildren<{ href: string }>) {
 }
 
 export default function Navigation() {
+    const [darkMode, setDarkMode] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    function toggleDarkMode(): void {
+        setDarkMode(!darkMode);
+    }
+
+    useEffect(() => {
+        const browserInDarkMode =
+            localStorage.getItem('theme') === 'dark' ||
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setDarkMode(browserInDarkMode);
+        setIsLoaded(true);
+    }, []);
+
+    useEffect(() => {
+        if (!isLoaded) {
+            return;
+        }
+
+        document.documentElement.classList.toggle('dark', darkMode);
+        localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+    }, [darkMode, isLoaded]);
+
     return (
         <div className="bg-nav dark:bg-dark-nav py-3">
             <nav className="container mx-auto flex justify-between flex-wrap text-white">
-                <Link className="mx-3 text-xl font-fancy no-underline" href="/">
+                <Link
+                    className="ml-3 md:mx-3 md:text-xl font-fancy no-underline"
+                    href="/"
+                >
                     Littledev
                 </Link>
                 <ul className="flex text-white no-underline">
@@ -37,11 +64,14 @@ export default function Navigation() {
                             href="https://github.com/blackshadev/"
                             title="My Github"
                         >
-                            <DiGithubBadge size="1.5rem" />
+                            <DiGithubBadge
+                                className="text-white dark:text-white"
+                                size="1.5rem"
+                            />
                         </a>
                     </li>
                     <li className="px-3">
-                        <button>
+                        <button onClick={toggleDarkMode}>
                             <HiMoon size="1.5rem" />
                         </button>
                     </li>

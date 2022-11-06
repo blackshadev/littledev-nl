@@ -8,10 +8,10 @@ type Props = {
 };
 export default function BlogPage({ blog }: Props) {
     return (
-        <article className="mx-5 md:mx-20">
+        <article className="mx-0 sm:mx-5 md:mx-20">
             <header>
                 {blog.image && (
-                    <div className="relative w-full h-96 mb-6">
+                    <div className="relative w-full md:h-96 h-32 mb-6">
                         <Image
                             src={require(`/assets/images/blogs/${blog.image}`)}
                             alt={blog.title}
