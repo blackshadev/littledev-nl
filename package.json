@@ -35,7 +35,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "lint-staged": "^13.1.0",
-    "next-export-optimize-images": "^1.9.0",
+    "next-export-optimize-images": "^1.9.1",
     "postcss": "^8.4.19",
     "postcss-import": "^15.0.0",
     "prettier": "^2.7.1",

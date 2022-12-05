@@ -2477,10 +2477,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next-export-optimize-images@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/next-export-optimize-images/-/next-export-optimize-images-1.9.0.tgz#6384961952a4dbf64bb2d77c75fe4a8cc6f88c42"
-  integrity sha512-mdgQPlsj1wT7fPcApwtC9S00I6qxiwJiyOnkJB9YDzltj/Y8ZmTQbvfixIL8kCTNXmrQLU0SLSNyqmyBf+bLxQ==
+next-export-optimize-images@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/next-export-optimize-images/-/next-export-optimize-images-1.9.1.tgz#51870b00d901edd64fd2a12bc1633d4fc4b72d7f"
+  integrity sha512-BeYxD3OAzo86QksOYi6mqigA3kQvHmrbF6ygw1K1mbMcYIQx4Ak/7GRIkn0rd6sB+8wr2sI81+/35fnqFsLVZA==
   dependencies:
     ansi-colors "^4.1.3"
     app-root-path "^3.1.0"
@@ -2488,7 +2488,7 @@ next-export-optimize-images@^1.9.0:
     fs-extra "^10.1.0"
     got "^11.8.5"
     lodash.uniqwith "^4.5.0"
-    sharp "^0.31.0"
+    sharp "^0.31.2"
 
 next@13.0.6:
   version "13.0.6"
@@ -3130,7 +3130,7 @@ semver@^7.3.5, semver@^7.3.7, semver@^7.3.8:
   dependencies:
     lru-cache "^6.0.0"
 
-sharp@^0.31.0:
+sharp@^0.31.2:
   version "0.31.2"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.31.2.tgz#a8411c80512027f5a452b76d599268760c4e5dfa"
   integrity sha512-DUdNVEXgS5A97cTagSLIIp8dUZ/lZtk78iNVZgHdHbx1qnQR7JAHY0BnXnwwH39Iw+VKhO08CTYhIg0p98vQ5Q==
