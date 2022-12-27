@@ -3,6 +3,7 @@
     "extends": [
         "config:base"
     ],
+    "prHourlyLimit": 8,
     "lockFileMaintenance": {
         "enabled": true,
         "automerge": true
