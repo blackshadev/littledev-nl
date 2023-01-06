@@ -52,7 +52,9 @@ export default function Navigation() {
                     <li className="px-3">
                         <a
                             href="https://github.com/blackshadev/"
+                            target="_blank"
                             title="My Github"
+                            rel="noreferrer noopener"
                         >
                             <SiGithub
                                 className="text-white dark:text-white"
