@@ -1,7 +1,6 @@
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren } from 'react';
 import Link from '../Link';
 import { SiGithub, SiMastodon } from 'react-icons/si';
-import { HiMoon } from 'react-icons/hi2';
 import DarkModeToggle from '../DarkModeToggle';
 
 function NavLink({ href, children }: PropsWithChildren<{ href: string }>) {

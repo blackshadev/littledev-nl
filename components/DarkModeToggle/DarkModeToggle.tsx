@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BsFillMoonFill as Moon } from 'react-icons/bs';
+import { BsFillMoonFill as Moon, BsSunFill as Sun } from 'react-icons/bs';
 
 export default function DarkModeToggle({ size }: { size: string }) {
     const [darkMode, setDarkMode] = useState(false);
@@ -28,7 +28,7 @@ export default function DarkModeToggle({ size }: { size: string }) {
 
     return (
         <button className="flow-root" onClick={toggleDarkMode}>
-            <Moon size={size} />
+            {darkMode ? <Sun size={size} /> : <Moon size={size} />}
         </button>
     );
 }

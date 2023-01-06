@@ -1,5 +1,5 @@
-import { DiGithubBadge } from 'react-icons/di';
-import { HiLink } from 'react-icons/hi2';
+import { ImLink } from 'react-icons/im';
+import { SiGithub } from 'react-icons/si';
 import { Project } from '../../../api/projects';
 import classNames from '../../../helpers/classNames';
 import { formatAsDate } from '../../../helpers/datetime';
@@ -26,14 +26,14 @@ export default function ProjectCard({
                     </p>
                     <h3 className="m-0 mb-2">{title}</h3>
                 </div>
-                <div className="flex">
+                <div className="flex pt-1">
                     {source && (
                         <a
                             href={source}
                             className="mr-2 text-link dark:text-dark-link"
                             title="Github repository"
                         >
-                            <DiGithubBadge size="1.5rem" />
+                            <SiGithub size="1.2rem" />
                         </a>
                     )}
                     {url && (
@@ -42,7 +42,7 @@ export default function ProjectCard({
                             className="mr-2 text-link dark:text-dark-link"
                             title="Website link"
                         >
-                            <HiLink size="1.5rem" />
+                            <ImLink size="1.2rem" />
                         </a>
                     )}
                 </div>
