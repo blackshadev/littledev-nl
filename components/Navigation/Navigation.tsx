@@ -1,6 +1,6 @@
 import { PropsWithChildren, useEffect, useState } from 'react';
 import Link from '../Link';
-import { DiGithubBadge } from 'react-icons/di';
+import { SiGithub, SiMastodon } from 'react-icons/si';
 import { HiMoon } from 'react-icons/hi2';
 
 function NavLink({ href, children }: PropsWithChildren<{ href: string }>) {
@@ -59,14 +59,28 @@ export default function Navigation() {
                     <li className="px-3">
                         <NavLink href="/projects">Projects</NavLink>
                     </li>
+
+                    <li className="px-3">
+                        <a
+                            rel="me noopener noreferrer"
+                            href="https://mas.to/@littledev"
+                            target="_blank"
+                            title="@littledev on Mastodon"
+                        >
+                            <SiMastodon
+                                className="text-white dark:text-white"
+                                size="1.4rem"
+                            />
+                        </a>
+                    </li>
                     <li className="px-3">
                         <a
                             href="https://github.com/blackshadev/"
                             title="My Github"
                         >
-                            <DiGithubBadge
+                            <SiGithub
                                 className="text-white dark:text-white"
-                                size="1.5rem"
+                                size="1.4rem"
                             />
                         </a>
                     </li>
