@@ -6,16 +6,15 @@
     "prHourlyLimit": 8,
     "lockFileMaintenance": {
         "enabled": true,
-        "automerge": true
+        "automerge": true,
+        "schedule": ["after 8am on sunday"]
     },
     "packageRules": [
         {
             "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-            "automerge": true
-        },
-        {
-            "matchDepTypes": ["devDependencies"],
-            "automerge": true
+            "automerge": true,
+            "groupName": "all non-major dependencies",
+            "groupSlug": "all-non-major-patch"
         }
     ]
 }
