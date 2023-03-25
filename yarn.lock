@@ -259,10 +259,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.3.tgz#f0b991c32cfc6a4e7f3399d6cb4b8cf9a0315014"
   integrity sha512-p6ua9zBxz5otCmbpb5D3U4B5Nanw6Pk3PPyX05xnxbB/fRv71N7CPmORg7uAD5P70T0xmx1pzAx/FUfa5X+3cw==
 
-"@types/node@18.15.7":
-  version "18.15.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.7.tgz#33514fca9bdf136f77027358850c0fb9cd93c669"
-  integrity sha512-LFmUbFunqmBn26wJZgZPYZPrDR1RwGOu2v79Mgcka1ndO6V0/cwjivPTc4yoK6n9kmw4/ls1r8cLrvh2iMibFA==
+"@types/node@18.15.9":
+  version "18.15.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.15.9.tgz#a9b529d2a16ae73122b3875969e7db18c9f3e790"
+  integrity sha512-dUxhiNzBLr6IqlZXz6e/rN2YQXlFgOei/Dxy+e3cyXTJ4txSUbGT2/fmnD6zd/75jDMeW5bDee+YXxlFKHoV0A==
 
 "@types/parse5@^6.0.0":
   version "6.0.3"
@@ -281,10 +281,19 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@18.0.28":
+"@types/react@*":
   version "18.0.28"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.28.tgz#accaeb8b86f4908057ad629a26635fe641480065"
   integrity sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@18.0.29":
+  version "18.0.29"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.29.tgz#4cead505172c0020c5b51940199e31fc6ff2f63a"
+  integrity sha512-wXHktgUABxplw1+UnljseDq4+uztQyp2tlWZRIxHlpchsCFqiYkvaDS8JR7eKOQm8wziTH/el5qL7D6gYNkYcw==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -996,7 +1005,7 @@ domelementtype@^2.3.0:
   resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-2.3.0.tgz#5c45e8e869952626331d7aab326d01daf65d589d"
   integrity sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==
 
-domhandler@5.0.3, domhandler@^5.0.1, domhandler@^5.0.2:
+domhandler@5.0.3, domhandler@^5.0.1, domhandler@^5.0.2, domhandler@^5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-5.0.3.tgz#cc385f7f751f1d1fc650c21374804254538c7d31"
   integrity sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==
@@ -1047,7 +1056,7 @@ enhanced-resolve@^5.10.0:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
 
-entities@^4.2.0, entities@^4.3.0:
+entities@^4.2.0, entities@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/entities/-/entities-4.4.0.tgz#97bdaba170339446495e653cfd2db78962900174"
   integrity sha512-oYp7156SP8LkeGD0GF85ad1X9Ai79WtRsZ2gxJqtBuzH+98YUV6jkHEKlZkMbcrjJjIVJNIDP/3WL9wQkoPbWA==
@@ -1823,21 +1832,21 @@ hastscript@^7.0.0:
     property-information "^6.0.0"
     space-separated-tokens "^2.0.0"
 
-html-dom-parser@3.1.6:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-3.1.6.tgz#1b14b472ca5cbbdf7d1b5b4590a1a1f59068d61f"
-  integrity sha512-j3JYc7/W4CUzZXBqJVljJaWQ1vddTG0bxipRZh03emQtUQ5Uk+rFKil3hk7RbS9yd4QcyaFdD2qGJ1f6aY47Qg==
+html-dom-parser@3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-3.1.7.tgz#89debae290d1117ad98a174264bb478dce3f3e74"
+  integrity sha512-cDgNF4YgF6J3H+d9mcldGL19p0GzVdS3iGuDNzYWQpU47q3+IRM85X3Xo07E+nntF4ek4s78A9V24EwxlPTjig==
   dependencies:
     domhandler "5.0.3"
-    htmlparser2 "8.0.1"
+    htmlparser2 "8.0.2"
 
 html-react-parser@^3.0.4:
-  version "3.0.14"
-  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-3.0.14.tgz#1e40633eb28fdc5a0eef32638d341b88ffd11e9f"
-  integrity sha512-e0b9UF8MD2ysx0hgNq+amdte36LjzzlkmNFfHwQLPL/6nZdPHYtUH1a0RqJIeqa/Rk/MZpLuL/jhdPSE3VU+4A==
+  version "3.0.15"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-3.0.15.tgz#559bb181e4395ffd280ad96e8d4cf78cf08f582a"
+  integrity sha512-iM2KUVhNoeIsezbpO6xwOHlFqWH+EYaCGwWWeX7R+jvrgc+mbnuouWaCU8GZRRbPKDD0eJXPZwLoeGVft84QXw==
   dependencies:
     domhandler "5.0.3"
-    html-dom-parser "3.1.6"
+    html-dom-parser "3.1.7"
     react-property "2.0.0"
     style-to-js "1.1.3"
 
@@ -1846,15 +1855,15 @@ html-void-elements@^2.0.0:
   resolved "https://registry.yarnpkg.com/html-void-elements/-/html-void-elements-2.0.1.tgz#29459b8b05c200b6c5ee98743c41b979d577549f"
   integrity sha512-0quDb7s97CfemeJAnW9wC0hw78MtW7NU3hqtCD75g2vFlDLt36llsYD7uB7SUzojLMP24N5IatXf7ylGXiGG9A==
 
-htmlparser2@8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-8.0.1.tgz#abaa985474fcefe269bc761a779b544d7196d010"
-  integrity sha512-4lVbmc1diZC7GUJQtRQ5yBAeUCL1exyMwmForWkRLnwyzWBFxN633SALPMGYaWZvKe9j1pRZJpauvmxENSp/EA==
+htmlparser2@8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-8.0.2.tgz#f002151705b383e62433b5cf466f5b716edaec21"
+  integrity sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==
   dependencies:
     domelementtype "^2.3.0"
-    domhandler "^5.0.2"
+    domhandler "^5.0.3"
     domutils "^3.0.1"
-    entities "^4.3.0"
+    entities "^4.4.0"
 
 http-cache-semantics@^4.0.0:
   version "4.1.1"
