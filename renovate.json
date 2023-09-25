@@ -7,11 +7,12 @@
     "lockFileMaintenance": {
         "enabled": true,
         "automerge": true,
-        "schedule": ["on the last day of the month"]
+        "schedule": ["before 8am on the first day of the month"]
     },
     "packageRules": [
         {
             "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+            "schedule": "after 8am on sunday",
             "automerge": true,
             "groupName": "all non-major dependencies",
             "groupSlug": "all-non-major-patch"
