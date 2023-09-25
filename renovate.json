@@ -7,7 +7,7 @@
     "lockFileMaintenance": {
         "enabled": true,
         "automerge": true,
-        "schedule": ["after 8am on sunday"]
+        "schedule": ["on the last day of the month"]
     },
     "packageRules": [
         {
