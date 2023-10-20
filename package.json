@@ -22,7 +22,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "remark": "^15.0.0",
-    "remark-html": "^15.0.1"
+    "remark-html": "^16.0.0"
   },
   "devDependencies": {
     "@types/node": "18.18.5",
