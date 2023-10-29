@@ -2392,10 +2392,10 @@ html-dom-parser@5.0.3:
     domhandler "5.0.3"
     htmlparser2 "9.0.0"
 
-html-react-parser@^4.0.0:
-  version "4.2.10"
-  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-4.2.10.tgz#618364ce90b2eb5fa8b80fe359eb553f97aaefa3"
-  integrity sha512-JyKZVQ+kQ8PdycISwkuLbEEvV/k4hWhU6cb6TT7yGaYwdqA7cPt4VRYXkCZcix2vlQtgDBSMJUmPI2jpNjPGvg==
+html-react-parser@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-5.0.0.tgz#5bd0ba65e7773d5c126a992f01afc7e2a71c0814"
+  integrity sha512-ISmjOIMGAnaL7beK6+ZQZpoNoZgOlsegsd1mN39OyTeF2Z87QmIoYYn11EVoT3WOtfvLJxGxedY7Yy6lTS6yww==
   dependencies:
     domhandler "5.0.3"
     html-dom-parser "5.0.3"
