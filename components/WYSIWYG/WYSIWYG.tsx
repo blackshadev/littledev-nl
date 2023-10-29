@@ -9,19 +9,23 @@ type Props = {
 function offsetHeading(
     domNode: DOMNode,
     offset: number
-): DOMNode | ReactElement {
+): undefined | ReactElement {
     if (domNode instanceof Element && /^h[1-9]$/.test(domNode.name)) {
         const headingNumber = parseInt(domNode.name.substring(1));
         const Heading = ('h' + (headingNumber + offset)) as 'h1';
 
         return (
             <Heading {...domNode.attribs}>
-                {domToReact(domNode.children)}
+                {domToReact(
+                    domNode.children
+                        .filter((n) => n.type !== 'cdata')
+                        .map((n) => n as DOMNode)
+                )}
             </Heading>
         );
     }
 
-    return domNode;
+    return undefined;
 }
 
 export default function WYSIWYG({ children, headingOffset }: Props) {
