@@ -16,6 +16,7 @@ export default function AboutMe({ name, image, subtitles, dob }: Props) {
                 <Image
                     width={194}
                     height={194}
+                    priority
                     src={image}
                     alt="This is me"
                     className="w-full h-full"
