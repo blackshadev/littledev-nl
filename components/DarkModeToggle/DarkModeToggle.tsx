@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { BsFillMoonFill as Moon, BsSunFill as Sun } from 'react-icons/bs';
 
