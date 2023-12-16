@@ -8,7 +8,7 @@ description: >-
     parts of a good database. Datastores, key-value stores, relational databases,
     graph databases all have a B+ tree or at least a B tree. These trees are data
     structures that are used to store and lookup key values within databases.
-date: '2015-05-31T00:00:00+02:00'
+date: '2015-05-31T00:00:00'
 tags:
     - tag: tech
     - tag: programming

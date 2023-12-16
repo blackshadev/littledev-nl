@@ -10,7 +10,7 @@ description: >+
     your favourite language.
 
 
-date: '2014-08-07T10:43:00+02:00'
+date: '2014-08-07T10:43:00'
 tags:
     - tag: script
 ---

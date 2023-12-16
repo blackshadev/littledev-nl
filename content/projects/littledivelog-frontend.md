@@ -3,7 +3,7 @@ title: Littledivelog (frontend)
 description: >-
     A divelog webapp which I use to log my own dives. I also have a client to
     download dives from my dive computer to the webapp
-date: '2017-03-01T00:00:00+02:00'
+date: '2017-03-01T00:00:00'
 source: 'https://github.com/blackshadev/littledivelog/tree/master/divingapp'
 url: 'https://dive.littledev.nl/'
 languages:
