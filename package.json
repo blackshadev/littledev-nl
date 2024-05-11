@@ -12,7 +12,7 @@
     "*.{js,tsx,ts}": "eslint"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^4.40.1",
+    "@netlify/plugin-nextjs": "^5.0.0",
     "@tailwindcss/forms": "^0.5.3",
     "gray-matter": "^4.0.3",
     "html-react-parser": "^5.0.0",
