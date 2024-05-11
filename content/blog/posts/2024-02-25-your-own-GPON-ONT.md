@@ -10,6 +10,8 @@ tags:
     - tag: networks
 ---
 
+Update: The module and router combi stated in this article don't interact that well. Please read my [followup](/blog/2024-02-25-your-own-GPON-ONT) for an alternative module.
+
 Some people just go out of there way to really own their internet service to the fullest. I am one of those people. I really dislike having gear from my internet service provider (ISP) at home. Especially because I know for a fact that my own gear is faster, more reliable, more configurable and cannot be screwed with by them. Now of course, this also means they cannot help me if I have internet issues. But honestly with my own gear, these incidents are few and far between.
 
 ## What are we working with
