@@ -1,8 +1,8 @@
 ---
-title: 'Your own GPON ONT'
+title: 'Your own GPON ONT pt. 2'
 state: Published
 description: >-
-    Running your own network setup can be fun. But this isn't always as straight forward as you might expect. Read more how to hook up the GPON network of your provider to your own gear.
+    I ran into some issues with the combination of my GPON module and router. In this post I tell you what happened and how I resolved it.
 date: '2024-05-11T11:19:00+01:00'
 image: 2024-02-25-your-own-gpon-ont.jpg
 tags:
