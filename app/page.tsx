@@ -7,13 +7,12 @@ import BlogCard from '../components/Cards/BlogCard';
 import ProjectCard from '../components/Cards/ProjectCard';
 import WYSIWYG from '../components/WYSIWYG';
 
-type Props = {
-    about: About;
-    home: Content;
-    blogs: Blog[];
-    projects: Project[];
-};
-export default function HomePage({ about, home, blogs, projects }: Props) {
+export default async function HomePage() {
+    const about = await getAboutMe();
+    const home = await getContent('pages/home.md');
+    const blogs = (await listBlogs()).slice(0, 2);
+    const projects = (await listProjects()).slice(0, 2);
+
     return (
         <div className="flex flex-wrap md:flex-nowrap">
             <article className="max-w-full w-full md:max-w-none md:w-auto">
@@ -57,17 +56,4 @@ export default function HomePage({ about, home, blogs, projects }: Props) {
             </div>
         </div>
     );
-}
-
-export async function getStaticProps(): Promise<{
-    props: Props;
-}> {
-    return {
-        props: {
-            about: await getAboutMe(),
-            home: await getContent('pages/home.md'),
-            blogs: (await listBlogs()).slice(0, 2),
-            projects: (await listProjects()).slice(0, 2),
-        },
-    };
 }

@@ -1,11 +1,9 @@
-import { useEffect, useMemo, useState } from 'react';
-import { listProjects, Project } from '../api/projects';
-import Filters from '../components/Filters';
-import ProjectList from '../components/Lists/ProjectList';
+'use client';
 
-type Props = {
-    projects: Project[];
-};
+import { Project } from '@/api/projects';
+import Filters from '@/components/Filters';
+import ProjectList from '@/components/Lists/ProjectList';
+import { useEffect, useMemo, useState } from 'react';
 
 function getFrequencies(values: string[]): { value: string; count: number }[] {
     const frequencies: { [value: string]: number } = {};
@@ -22,7 +20,11 @@ function getFrequencies(values: string[]): { value: string; count: number }[] {
         .sort((a, b) => b.count - a.count);
 }
 
-export default function ProjectListPage({ projects }: Props) {
+export default function ProjectsWithFilters({
+    projects,
+}: {
+    projects: Project[];
+}) {
     const [filteredProjects, setFilteredProjects] = useState(projects);
     const languages = useMemo(() => {
         return getFrequencies(projects.flatMap((project) => project.languages));
@@ -35,6 +37,7 @@ export default function ProjectListPage({ projects }: Props) {
     const [selected, setSelected] = useState<
         { type: 'languages' | 'tech'; value: string } | undefined
     >();
+
     useEffect(() => {
         if (!selected) {
             return setFilteredProjects(projects);
@@ -48,8 +51,7 @@ export default function ProjectListPage({ projects }: Props) {
     }, [selected, projects]);
 
     return (
-        <section className="mx-4 grid grid-cols-4 gap-4">
-            <h1 className="w-full col-span-full">Projects</h1>
+        <>
             <aside role="search" className="mb-4 col-span-full lg:col-span-1">
                 <h3>Languages</h3>
                 <Filters
@@ -80,16 +82,6 @@ export default function ProjectListPage({ projects }: Props) {
                 projects={filteredProjects}
                 className="col-span-full lg:col-span-3"
             />
-        </section>
+        </>
     );
-}
-
-export async function getStaticProps(): Promise<{
-    props: Props;
-}> {
-    return {
-        props: {
-            projects: await listProjects(),
-        },
-    };
 }

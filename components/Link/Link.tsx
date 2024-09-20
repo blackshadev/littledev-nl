@@ -1,5 +1,7 @@
+'use client';
+
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { ComponentProps } from 'react';
 import classNames from '../../helpers/classNames';
 
@@ -16,8 +18,8 @@ export default function Link({
     children,
     ...props
 }: Props) {
-    const router = useRouter();
-    const isActive = router.pathname === href;
+    const pathname = usePathname();
+    const isActive = pathname === href;
 
     return (
         <NextLink

@@ -1,12 +1,14 @@
 import Image from 'next/image';
-import { Blog, getBlog, listBlogs } from '../../api/blogs';
-import WYSIWYG from '../../components/WYSIWYG';
-import { formatAsDate } from '../../helpers/datetime';
+import { Blog, getBlog, listBlogs } from '@/api/blogs';
+import WYSIWYG from '@/components/WYSIWYG';
+import { formatAsDate } from '@/helpers/datetime';
 
 type Props = {
-    blog: Blog;
+    params: { slug: string };
 };
-export default function BlogPage({ blog }: Props) {
+export default async function BlogPage({ params: { slug } }: Props) {
+    const blog = await getBlog(slug + '.md');
+
     return (
         <article className="mx-0 sm:mx-5 md:mx-20">
             <header>
@@ -31,30 +33,6 @@ export default function BlogPage({ blog }: Props) {
         </article>
     );
 }
-
-export async function getStaticProps({
-    params: { slug },
-}: {
-    params: { slug: string };
-}): Promise<{
-    props: Props;
-}> {
-    return {
-        props: {
-            blog: await getBlog(slug + '.md'),
-        },
-    };
-}
-
-export async function getStaticPaths(): Promise<{
-    paths: { params: { slug: string } }[];
-    fallback: boolean;
-}> {
-    return {
-        paths: (await listBlogs()).map((blog) => ({
-            params: { slug: blog.slug },
-        })),
-
-        fallback: false,
-    };
+export async function generateStaticParams() {
+    return (await listBlogs()).map((blog) => ({ slug: blog.slug }));
 }

@@ -1,11 +1,9 @@
-import getAboutMe, { About } from '../api/aboutMe';
-import AboutMe from '../components/AboutMe/AboutMe';
-import WYSIWYG from '../components/WYSIWYG';
+import getAboutMe from '@/api/aboutMe';
+import AboutMe from '@/components/AboutMe/AboutMe';
+import WYSIWYG from '@/components/WYSIWYG';
 
-type Props = {
-    about: About;
-};
-export default function AboutPage({ about }: Props) {
+export default async function AboutPage() {
+    const about = await getAboutMe();
     return (
         <div className="flex flex-wrap md:flex-nowrap">
             <article className="w-full md:w-auto">
@@ -43,14 +41,4 @@ export default function AboutPage({ about }: Props) {
             </div>
         </div>
     );
-}
-
-export async function getStaticProps(): Promise<{
-    props: Props;
-}> {
-    return {
-        props: {
-            about: await getAboutMe(),
-        },
-    };
 }
