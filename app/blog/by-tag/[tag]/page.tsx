@@ -2,9 +2,11 @@ import { Blog, listBlogsByTag, listTags } from '@/api/blogs';
 import BlogList from '@/components/Lists/BlogList';
 
 type Props = {
-    params: { tag: string };
+    params: Promise<{ tag: string }>;
 };
-export default async function BlogByTagListPage({ params: { tag } }: Props) {
+export default async function BlogByTagListPage(props: Props) {
+    const { tag } = await props.params;
+
     const blogs = await listBlogsByTag(tag);
     return (
         <>
