@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { About } from '../../api/aboutMe';
 import { formatAsDate } from '../../helpers/datetime';
 import Subtitle from './Subtitle';

@@ -4,9 +4,11 @@ import WYSIWYG from '@/components/WYSIWYG';
 import { formatAsDate } from '@/helpers/datetime';
 
 type Props = {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 };
-export default async function BlogPage({ params: { slug } }: Props) {
+export default async function BlogPage(props: Props) {
+    const { slug } = await props.params;
+
     const blog = await getBlog(slug + '.md');
 
     return (
@@ -15,7 +17,9 @@ export default async function BlogPage({ params: { slug } }: Props) {
                 {blog.image && (
                     <div className="relative w-full md:h-96 h-32 mb-6">
                         <Image
-                            src={require(`/assets/images/blogs/${blog.image}`)}
+                            src={require(
+                                `../../../assets/images/blogs/${blog.image}`
+                            )}
                             alt={blog.title}
                             fill
                             className="object-cover shadow rounded"
