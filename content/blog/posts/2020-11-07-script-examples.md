@@ -47,27 +47,27 @@ In this example we have an JSON as input with an array containing an object with
 ## JavaScript
 
 ```javascript
-;(function () {
-    var emailRegex_str = '[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}'
-    var email_re = new RegExp(emailRegex_str)
-    var arr = JSON.parse(host.input.json)
+(function () {
+    var emailRegex_str = '[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}';
+    var email_re = new RegExp(emailRegex_str);
+    var arr = JSON.parse(host.input.json);
 
-    var valid = 0
-    var invalid = 0
-    var totalRating = 0
+    var valid = 0;
+    var invalid = 0;
+    var totalRating = 0;
 
     for (var i = 0; i < arr.length; i++) {
-        totalRating += arr[i].rating
+        totalRating += arr[i].rating;
 
-        var isValid = email_re.test(arr[i]['email'])
-        if (isValid) valid++
-        else invalid++
+        var isValid = email_re.test(arr[i]['email']);
+        if (isValid) valid++;
+        else invalid++;
     }
 
-    host.output.valid = valid
-    host.output.invalid = invalid
-    host.output.totalRating = totalRating
-})()
+    host.output.valid = valid;
+    host.output.invalid = invalid;
+    host.output.totalRating = totalRating;
+})();
 ```
 
 ## C#
@@ -109,9 +109,9 @@ With this snippet you can actually use the “Console” type of C# from within 
 Ok this is easy, Node.Js is already JS, so lets be quick about this.
 
 ```javascript
-;(function () {
-    var fs = require('fs')
-    var vm = require('vm')
+(function () {
+    var fs = require('fs');
+    var vm = require('vm');
 
     // setup execution environment
     var env = {
@@ -119,22 +119,22 @@ Ok this is easy, Node.Js is already JS, so lets be quick about this.
             input: {},
             output: {},
         },
-    }
+    };
 
     // fill with json
-    env.host.input.json = fs.readFileSync('input.json')
-    var script = fs.readFileSync('script.js')
+    env.host.input.json = fs.readFileSync('input.json');
+    var script = fs.readFileSync('script.js');
 
     // Run the script
-    vm.runInNewContext(script, env)
+    vm.runInNewContext(script, env);
 
     // Output
-    var out = env.host.output
-    var avg = out.totalRating / (out.invalid + out.valid)
-    console.log('Got ' + out.invalid + ' invalid email adresses')
-    console.log('Got ' + out.valid + ' valid email adresses')
-    console.log('Total average rating ' + avg)
-})()
+    var out = env.host.output;
+    var avg = out.totalRating / (out.invalid + out.valid);
+    console.log('Got ' + out.invalid + ' invalid email adresses');
+    console.log('Got ' + out.valid + ' valid email adresses');
+    console.log('Total average rating ' + avg);
+})();
 ```
 
 As you can see, with this example we can even omit the `host` property within the `env` variable, but because I wanted to use the same script file for all examples I left it in.

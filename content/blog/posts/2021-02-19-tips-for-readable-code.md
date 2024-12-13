@@ -22,11 +22,11 @@ I cannot iterate this enough though. If you assume the readers of your code are 
 Knowing which tools you have to make your code more readable is half the battle. If you assume you can only add comments, you probabily will end with a lot of readable content, but not with readable code.
 My readable code toolbox consists of the following:
 
--   Naming
--   Putting code in named functions
--   Restructuring the code
--   Refactoring the code
--   and dead last: explanatory comments
+- Naming
+- Putting code in named functions
+- Restructuring the code
+- Refactoring the code
+- and dead last: explanatory comments
 
 ### Naming
 

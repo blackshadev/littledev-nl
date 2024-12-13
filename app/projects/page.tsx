@@ -1,11 +1,8 @@
-import { listProjects, Project } from '@/api/projects';
+import { listProjects } from '@/api/projects';
 import ProjectsWithFilters from './ProjectsWithFilters';
+import { ReactNode } from 'react';
 
-type Props = {
-    projects: Project[];
-};
-
-export default async function ProjectListPage() {
+export default async function ProjectListPage(): Promise<ReactNode> {
     const projects = await listProjects();
 
     return (

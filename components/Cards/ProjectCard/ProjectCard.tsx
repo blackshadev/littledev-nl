@@ -4,6 +4,7 @@ import { Project } from '../../../api/projects';
 import classNames from '../../../helpers/classNames';
 import { formatAsDate } from '../../../helpers/datetime';
 import CommonCard from '../Common';
+import { ReactNode } from 'react';
 
 type Props = Project & { className?: string; withOverlay?: boolean };
 export default function ProjectCard({
@@ -16,7 +17,7 @@ export default function ProjectCard({
     languages,
     tech,
     withOverlay = false,
-}: Props) {
+}: Props): ReactNode {
     return (
         <CommonCard className={classNames(className)} withOverlay={withOverlay}>
             <header className="flex justify-between">

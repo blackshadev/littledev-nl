@@ -1,4 +1,4 @@
-import path, { parse } from 'path';
+import path from 'path';
 import fs from 'fs';
 import getContent, { Content, CONTENT_DIR } from './content';
 

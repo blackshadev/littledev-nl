@@ -1,45 +1,51 @@
 {
-  "name": "littledev-nl-next",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "lint-staged": {
-    "*.{js,tsx,ts}": "eslint"
-  },
-  "dependencies": {
-    "@netlify/plugin-nextjs": "^5.0.0",
-    "@tailwindcss/forms": "^0.5.3",
-    "gray-matter": "^4.0.3",
-    "html-react-parser": "^5.0.0",
-    "next": "14.2.20",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-icons": "^5.0.0",
-    "remark": "^15.0.0",
-    "remark-html": "^16.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "22.10.1",
-    "@types/react": "18.3.14",
-    "@types/react-dom": "18.3.2",
-    "autoprefixer": "^10.4.13",
-    "dayjs": "^1.11.7",
-    "eslint": "8.57.1",
-    "eslint-config-next": "14.2.20",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "lint-staged": "^15.0.0",
-    "next-export-optimize-images": "^4.0.0",
-    "postcss": "^8.4.20",
-    "postcss-import": "^16.0.0",
-    "prettier": "^3.0.0",
-    "tailwindcss": "^3.2.3",
-    "typescript": "5.7.2"
-  }
+    "name": "littledev-nl-next",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint && prettier . -c",
+        "fix": "eslint --fix && prettier -w ."
+    },
+    "lint-staged": {
+        "*.{js,tsx,ts}": [
+            "eslint --fix",
+            "prettier -w ."
+        ]
+    },
+    "dependencies": {
+        "@netlify/plugin-nextjs": "^5.9.0",
+        "@tailwindcss/forms": "^0.5.9",
+        "gray-matter": "^4.0.3",
+        "html-react-parser": "^5.2.0",
+        "next": "15.0.3",
+        "react": "19.0.0",
+        "react-dom": "19.0.0",
+        "react-icons": "^5.4.0",
+        "remark": "^15.0.1",
+        "remark-html": "^16.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "22.10.1",
+        "@types/react": "19.0.1",
+        "@types/react-dom": "19.0.2",
+        "autoprefixer": "^10.4.20",
+        "dayjs": "^1.11.13",
+        "eslint": "9.16.0",
+        "eslint-config-next": "15.0.3",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-unused-imports": "^4.1.4",
+        "lint-staged": "^15.2.11",
+        "next-export-optimize-images": "^4.6.1",
+        "postcss": "^8.4.49",
+        "postcss-import": "^16.1.0",
+        "prettier": "^3.4.2",
+        "tailwindcss": "^3.4.16",
+        "typescript": "5.7.2",
+        "typescript-eslint": "^8.18.0"
+    }
 }

@@ -1,12 +1,15 @@
-import Image from 'next/image';
-import { Blog, getBlog, listBlogs } from '@/api/blogs';
-import WYSIWYG from '@/components/WYSIWYG';
+import { getBlog, listBlogs } from '@/api/blogs';
+import Content from '@/components/Content';
 import { formatAsDate } from '@/helpers/datetime';
+import { ReactNode } from 'react';
+import Image from 'next/image';
 
 type Props = {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 };
-export default async function BlogPage({ params: { slug } }: Props) {
+export default async function BlogPage(props: Props): Promise<ReactNode> {
+    const { slug } = await props.params;
+
     const blog = await getBlog(slug + '.md');
 
     return (
@@ -15,7 +18,7 @@ export default async function BlogPage({ params: { slug } }: Props) {
                 {blog.image && (
                     <div className="relative w-full md:h-96 h-32 mb-6">
                         <Image
-                            src={require(`/assets/images/blogs/${blog.image}`)}
+                            src={`/assets/images/blogs/${blog.image}`}
                             alt={blog.title}
                             fill
                             className="object-cover shadow rounded"
@@ -28,11 +31,11 @@ export default async function BlogPage({ params: { slug } }: Props) {
 
             <div>
                 <p>{blog.description}</p>
-                <WYSIWYG>{blog.content}</WYSIWYG>
+                <Content>{blog.content}</Content>
             </div>
         </article>
     );
 }
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
     return (await listBlogs()).map((blog) => ({ slug: blog.slug }));
 }

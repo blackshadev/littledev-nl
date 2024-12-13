@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import classNames from '../../../helpers/classNames';
 
 type Props = { className: string; withOverlay: boolean };
@@ -7,7 +7,7 @@ export default function CommonCard({
     children,
     className,
     withOverlay,
-}: PropsWithChildren<Props>) {
+}: PropsWithChildren<Props>): ReactNode {
     return (
         <article
             className={classNames(

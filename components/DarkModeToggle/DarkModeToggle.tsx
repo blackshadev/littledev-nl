@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { BsFillMoonFill as Moon, BsSunFill as Sun } from 'react-icons/bs';
 
-export default function DarkModeToggle({ size }: { size: string }) {
+export default function DarkModeToggle({ size }: { size: string }): ReactNode {
     const [darkMode, setDarkMode] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
 
@@ -29,7 +29,7 @@ export default function DarkModeToggle({ size }: { size: string }) {
     }, [darkMode, isLoaded]);
 
     return (
-        <button className="flow-root" onClick={toggleDarkMode}>
+        <button type="button" className="flow-root" onClick={toggleDarkMode}>
             {darkMode ? <Sun size={size} /> : <Moon size={size} />}
         </button>
     );

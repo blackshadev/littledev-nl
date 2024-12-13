@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import classNames from '../helpers/classNames';
 import '../styles/globals.css';
 import { Metadata } from 'next';
+import { ReactNode } from 'react';
 
 const oxygen = Oxygen({
     subsets: ['latin'],
@@ -25,7 +26,7 @@ export default function RootLayout({
     children,
 }: {
     children: React.ReactNode;
-}) {
+}): ReactNode {
     return (
         <html
             lang="en"

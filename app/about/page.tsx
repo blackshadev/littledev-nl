@@ -1,8 +1,9 @@
 import getAboutMe from '@/api/aboutMe';
 import AboutMe from '@/components/AboutMe/AboutMe';
-import WYSIWYG from '@/components/WYSIWYG';
+import Content from '@/components/Content';
+import { ReactNode } from 'react';
 
-export default async function AboutPage() {
+export default async function AboutPage(): Promise<ReactNode> {
     const about = await getAboutMe();
     return (
         <div className="flex flex-wrap md:flex-nowrap">
@@ -11,7 +12,7 @@ export default async function AboutPage() {
             </article>
             <div className="p-6">
                 <h1>About me</h1>
-                <WYSIWYG>{about.content}</WYSIWYG>
+                <Content>{about.content}</Content>
                 <div className="mt-5 flex flex-wrap flex-row justify-evenly">
                     <section className="pr-6 w-full md:w-auto">
                         <h2 className="mb-2">Languages</h2>

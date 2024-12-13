@@ -5,7 +5,5 @@
     "editor.codeActionsOnSave": {
         "source.fixAll": "explicit"
     },
-    "cSpell.enableFiletypes": [
-        "markdown"
-    ]
+    "cSpell.enableFiletypes": ["markdown"]
 }
