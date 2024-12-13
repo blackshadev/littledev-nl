@@ -27,7 +27,7 @@ var routes = {
     '[GET,PUT]/test/json/': 'test.js:getJson',
     '[POST]/test/': 'test.js:post',
     '/statics/*': 'statics.js',
-}
+};
 ```
 
 ## Tree building

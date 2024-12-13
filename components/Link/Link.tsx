@@ -2,7 +2,7 @@
 
 import NextLink from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ComponentProps } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 import classNames from '../../helpers/classNames';
 
 type Props = ComponentProps<typeof NextLink> & {
@@ -17,7 +17,7 @@ export default function Link({
     href,
     children,
     ...props
-}: Props) {
+}: Props): ReactNode {
     const pathname = usePathname();
     const isActive = pathname === href;
 

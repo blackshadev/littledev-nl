@@ -1,29 +1,29 @@
 name: ci
 
 on:
-  pull_request:
-    branches:
-      - main
-      - master
+    pull_request:
+        branches:
+            - main
+            - master
 
 jobs:
-  ci:
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        bun: [1.1.8]
+    ci:
+        strategy:
+            matrix:
+                os: [ubuntu-latest]
+                bun: [1.1.8]
 
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@master
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: Checkout 🛎
+              uses: actions/checkout@master
 
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: ${{ matrix.bun }}
+            - uses: oven-sh/setup-bun@v2
+              with:
+                  bun-version: ${{ matrix.bun }}
 
-      - name: Install dependencies 👨🏻‍💻
-        run: bun i
+            - name: Install dependencies 👨🏻‍💻
+              run: bun i
 
-      - name: Run linter 👀
-        run: bun run lint
+            - name: Run linter 👀
+              run: bun run lint

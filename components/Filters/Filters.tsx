@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import classNames from '../../helpers/classNames';
 
 type Props = {
@@ -5,11 +6,16 @@ type Props = {
     onSelect(value: string | undefined): void;
     selectedValue?: string;
 };
-export default function Filters({ values, selectedValue, onSelect }: Props) {
+export default function Filters({
+    values,
+    selectedValue,
+    onSelect,
+}: Props): ReactNode {
     return (
         <>
             {values.map((value) => (
                 <button
+                    type="button"
                     onClick={() =>
                         onSelect(
                             selectedValue === value.value

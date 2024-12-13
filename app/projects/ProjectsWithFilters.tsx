@@ -3,7 +3,7 @@
 import { Project } from '@/api/projects';
 import Filters from '@/components/Filters';
 import ProjectList from '@/components/Lists/ProjectList';
-import { useEffect, useMemo, useState } from 'react';
+import { ReactNode, useEffect, useMemo, useState } from 'react';
 
 function getFrequencies(values: string[]): { value: string; count: number }[] {
     const frequencies: { [value: string]: number } = {};
@@ -24,7 +24,7 @@ export default function ProjectsWithFilters({
     projects,
 }: {
     projects: Project[];
-}) {
+}): ReactNode {
     const [filteredProjects, setFilteredProjects] = useState(projects);
     const languages = useMemo(() => {
         return getFrequencies(projects.flatMap((project) => project.languages));

@@ -6,7 +6,7 @@ import html from 'remark-html';
 
 export const CONTENT_DIR = path.join(process.cwd(), 'content');
 
-export type Content<T = {}> = T & {
+export type Content<T = unknown> = T & {
     content: string;
     filepath: string;
     title: string;

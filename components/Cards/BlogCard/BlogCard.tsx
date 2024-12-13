@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Blog } from '../../../api/blogs';
 import classNames from '../../../helpers/classNames';
 import { formatAsDate } from '../../../helpers/datetime';
@@ -14,7 +15,7 @@ export default function BlogCard({
     description,
     className,
     withOverlay = false,
-}: Props) {
+}: Props): ReactNode {
     return (
         <CommonCard className={classNames(className)} withOverlay={withOverlay}>
             <header className="mb-4">

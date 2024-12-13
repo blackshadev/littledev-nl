@@ -1,7 +1,8 @@
-import { Blog, listBlogs } from '../../api/blogs';
+import { ReactNode } from 'react';
+import { listBlogs } from '../../api/blogs';
 import BlogList from '../../components/Lists/BlogList';
 
-export default async function BlogListPage() {
+export default async function BlogListPage(): ReactNode {
     const blogs = await listBlogs();
     return (
         <>

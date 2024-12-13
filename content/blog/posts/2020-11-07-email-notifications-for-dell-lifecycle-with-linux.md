@@ -31,27 +31,27 @@ Pro Tip: You may want to change the from and destination email address before us
 #### mail_system_event.js
 
 ```javascript
-var sys = require('sys')
-var exec = require('child_process').exec
-var format = require('util').format
-var child
-var date_re = new RegExp('Date and Times:s([a-zA-Z0-9: ]*)', 'gm')
-var subj_re = new RegExp('Descriptions:s([a-zA-Z0-9: ]*)', 'mg')
-var from = 'server@littledev.nl' // from address
-var to = 'info@littledev.nl' // which address to send to
-var sendEmail = '/opt/scripts/sendEmail'
+var sys = require('sys');
+var exec = require('child_process').exec;
+var format = require('util').format;
+var child;
+var date_re = new RegExp('Date and Times:s([a-zA-Z0-9: ]*)', 'gm');
+var subj_re = new RegExp('Descriptions:s([a-zA-Z0-9: ]*)', 'mg');
+var from = 'server@littledev.nl'; // from address
+var to = 'info@littledev.nl'; // which address to send to
+var sendEmail = '/opt/scripts/sendEmail';
 
 child = exec(
     '/opt/dell/srvadmin/bin/omreport system alertlog | tail -n 50',
     function (err, stdout, stderr) {
-        var blocks = stdout.split('\n\n')
-        blocks.shift() // remove first
-        blocks.reverse()
-        blocks.shift() // remove last (only an enter)
-        var date = blocks[0].match(/Date and Time\s*:\s*([a-zA-Z0-9: ]*)/)[1]
-        var desc = blocks[0].match(/Description\s*:\s*([a-zA-Z0-9: ]*)/)[1]
+        var blocks = stdout.split('\n\n');
+        blocks.shift(); // remove first
+        blocks.reverse();
+        blocks.shift(); // remove last (only an enter)
+        var date = blocks[0].match(/Date and Time\s*:\s*([a-zA-Z0-9: ]*)/)[1];
+        var desc = blocks[0].match(/Description\s*:\s*([a-zA-Z0-9: ]*)/)[1];
 
-        var message = 'Server event\n---------\n' + blocks[0]
+        var message = 'Server event\n---------\n' + blocks[0];
 
         var args = format(
             '-f "%s" -t "%s" -u "%s" -m "%s" -o tls=no ',
@@ -59,12 +59,12 @@ child = exec(
             to,
             desc,
             message
-        )
+        );
         exec(sendEmail + ' ' + args, function (err, stdout, stderr) {
-            if (err) console.log(stderr)
-        })
+            if (err) console.log(stderr);
+        });
     }
-)
+);
 ```
 
 #### send_alert.sh

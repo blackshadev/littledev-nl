@@ -2,9 +2,15 @@ import Image from 'next/image';
 import { About } from '../../api/aboutMe';
 import { formatAsDate } from '../../helpers/datetime';
 import Subtitle from './Subtitle';
+import { ReactNode } from 'react';
 
 type Props = About;
-export default function AboutMe({ name, image, subtitles, dob }: Props) {
+export default function AboutMe({
+    name,
+    image,
+    subtitles,
+    dob,
+}: Props): ReactNode {
     return (
         <div className="flex items-center flex-col mx-3">
             <div className="rounded-full w-48 h-48 overflow-hidden mb-3">
