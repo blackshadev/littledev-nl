@@ -10,7 +10,7 @@
         "fix": "eslint --fix && prettier -w ."
     },
     "lint-staged": {
-        "*.{js,tsx,ts}": "eslint --fix && prettier -w ."
+        "*.{js,tsx,ts}": ["eslint --fix", "prettier -w ."]
     },
     "dependencies": {
         "@netlify/plugin-nextjs": "^5.9.0",

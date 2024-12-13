@@ -3,7 +3,7 @@ import AboutMe from '@/components/AboutMe/AboutMe';
 import Content from '@/components/Content';
 import { ReactNode } from 'react';
 
-export default async function AboutPage(): ReactNode {
+export default async function AboutPage(): Promise<ReactNode> {
     const about = await getAboutMe();
     return (
         <div className="flex flex-wrap md:flex-nowrap">
