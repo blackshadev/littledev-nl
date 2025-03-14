@@ -41,7 +41,7 @@ export default function RootLayout({
                     ></script>
                 )}
             </head>
-            <body>
+            <body className="bg-white text-black dark:bg-gray-900 dark:text-gray-100">
                 <Layout>{children}</Layout>
             </body>
         </html>
