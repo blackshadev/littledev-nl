@@ -1,7 +1,5 @@
+@import './tailwind.css';
 @import './wysiwyg.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
     h1,
@@ -29,8 +27,5 @@
     a svg,
     p a {
         @apply text-link dark:text-dark-link;
-    }
-    body {
-        @apply dark:bg-gray-900 dark:text-gray-100;
     }
 }

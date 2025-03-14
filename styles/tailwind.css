@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-primary: var(--color-violet-900);
+    --color-link: var(--color-violet-800);
+    --color-sub: var(--color-gray-700);
+    --color-tag: var(--color-violet-300);
+    --color-nav: var(--color-violet-700);
+
+    --color-dark-primary: var(--color-violet-500);
+    --color-dark-link: var(--color-violet-400);
+    --color-dark-sub: var(--color-gray-300);
+    --color-dark-tag: var(--color-violet-900);
+    --color-dark-nav: var(--color-violet-800);
+
+    --font-fancy: 'Oxygen', sans-serif;
+    --font-sans: 'Roboto', sans-serif;
+}
