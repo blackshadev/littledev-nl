@@ -28,12 +28,12 @@
         "remark-html": "^16.0.1"
     },
     "devDependencies": {
-        "@types/node": "22.13.14",
-        "@types/react": "19.0.12",
-        "@types/react-dom": "19.0.4",
+        "@types/node": "22.14.0",
+        "@types/react": "19.1.0",
+        "@types/react-dom": "19.1.1",
         "autoprefixer": "^10.4.21",
         "dayjs": "^1.11.13",
-        "eslint": "9.23.0",
+        "eslint": "9.24.0",
         "eslint-config-next": "15.2.4",
         "eslint-config-prettier": "^10.1.1",
         "eslint-plugin-prettier": "^5.2.3",
@@ -45,7 +45,7 @@
         "postcss-import": "^16.1.0",
         "prettier": "^3.5.3",
         "tailwindcss": "^4.0.14",
-        "typescript": "5.8.2",
+        "typescript": "5.8.3",
         "typescript-eslint": "^8.26.1"
     }
 }
