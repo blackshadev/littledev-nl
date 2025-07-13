@@ -28,12 +28,12 @@
         "remark-html": "^16.0.1"
     },
     "devDependencies": {
-        "@types/node": "22.16.0",
+        "@types/node": "22.16.3",
         "@types/react": "19.1.8",
         "@types/react-dom": "19.1.6",
         "autoprefixer": "^10.4.21",
         "dayjs": "^1.11.13",
-        "eslint": "9.30.1",
+        "eslint": "9.31.0",
         "eslint-config-next": "15.3.5",
         "eslint-config-prettier": "^10.1.1",
         "eslint-plugin-prettier": "^5.2.3",
